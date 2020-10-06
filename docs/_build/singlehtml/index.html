@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="[en]" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MAGITICS [] documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> MAGITICS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-docs/index">MAGITICS &#64;CBIB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#magitics">MAGITICS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#input-format">Input format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#contact">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-api/index">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-api/main">Main functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-api/data">Dataset &amp; DataLoaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#module-data.Kmercount_to_matrix">Kmer-count based matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#module-data.plfam_to_matrix">Genes-id based matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#module-data.kmer_gene_correspondance">Kmer/Genes correspondance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-api/learning">Learning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#train-test-in-batch-mode">Train &amp; test in batch mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#test-in-streaming-mode">Test in streaming mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">MAGITICS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>MAGITICS [] documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-magitics-documentation">
+<h1>Welcome to MAGITICS documentation!<a class="headerlink" href="#welcome-to-magitics-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<span id="document-docs/index"></span><div class="section" id="magitics-cbib">
+<h2>MAGITICS &#64;CBIB<a class="headerlink" href="#magitics-cbib" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="magitics">
+<h3>MAGITICS<a class="headerlink" href="#magitics" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>MAGITICS is a research project using machine learning for the
+prediction of antimicrobial resistance (AMR). More precisely, we
+leverage DNA sequence data in the form of k-mers to predict the
+resistance of the strains and potentially identify new resistance
+genes.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#installation">Installation</a></p></li>
+<li><p><a class="reference external" href="#usage">Usage</a></p></li>
+<li><p><a class="reference external" href="#input-format">Input format</a></p></li>
+<li><p><a class="reference external" href="#output">Output</a></p></li>
+<li><p><a class="reference external" href="#contact">Contact</a> ## Installation</p></li>
+</ul>
+<ul>
+<li><p>Python3 packages needed</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ Pandas
+$ Scikit-learn
+$ Numpy
+$ Tensorflow
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/yvanlucas/magitics_project
+</pre></div>
+</div>
+<p>Before starting, you must specify the path to your datas in the
+<em>config.py</em> file.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Kmer parsing into sparse matrix (scipy.sparse.coo_matrix):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">data</span> <span class="kn">import</span> <span class="n">Kmercount_to_matrix</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">Kmercount_to_matrix</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You can specify before in <em>config.py</em> the model you want to use, or pass
+one as argument</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;gradient&#39;</span>  <span class="c1"># can be [&#39;rf&#39;,&#39;SCM&#39;, &#39;gradient&#39;, &#39;Ada&#39;]</span>
+</pre></div>
+</div>
+<p>Learning and testing all at once (RAM consuming process):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">learning</span> <span class="kn">import</span> <span class="n">Train_kmer_clf</span>
+<span class="n">learner</span> <span class="o">=</span> <span class="n">Train_kmer_clf</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span> <span class="o">*</span><span class="n">model</span><span class="o">*</span><span class="p">)</span>
+<span class="n">learner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">evaluate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Learning and testing in streaming mode (RAM efficient):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">learning</span> <span class="kn">import</span> <span class="n">Train_kmer_clf</span><span class="p">,</span>  <span class="n">Test_streaming</span>
+<span class="n">learner</span> <span class="o">=</span> <span class="n">Train_kmer_clf</span><span class="p">(</span><span class="n">clf</span><span class="o">=</span> <span class="o">*</span><span class="n">model</span><span class="o">*</span><span class="p">)</span>
+<span class="n">learner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">evaluate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">tester</span> <span class="o">=</span> <span class="n">Test_streaming</span><span class="p">(</span><span class="n">batchsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">kmer_to_index</span><span class="o">=</span><span class="n">learner</span><span class="o">.</span><span class="n">kmer_to_index</span><span class="p">,</span> <span class="n">clf</span><span class="o">=</span><span class="n">learner</span><span class="o">.</span><span class="n">cv_clf</span><span class="p">)</span>
+<span class="n">tester</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="input-format">
+<h2>Input format<a class="headerlink" href="#input-format" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Fasta files
+(<a class="reference external" href="https://docs.google.com/document/d/1YcsyUQMT7aTPcqjS0t5VULW1UO9O5rHCiLeukZ47jjc/edit?usp=sharing">Example</a>)
+## Output</p></li>
+<li><p>Report file
+(<a class="reference external" href="https://docs.google.com/document/d/1_gKsC3LW8TkwoGkbpJm-ubarPMmP7lEJoW3HCsvKzZo/edit?usp=sharing">Example</a>)</p></li>
+<li><p>Pickle file of the form:</p>
+<p>{&quot;classifier&quot;: clf, &quot;features&quot;: kmer_to_index, &quot;y_pred&quot;: y_preds,
+&quot;y_pruned&quot;: y_pruned, &quot;y_true&quot;: y_test, &quot;score&quot;:score}</p>
+</li>
+</ul>
+</div>
+<div class="section" id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="mailto:yvanlucas44&#37;&#52;&#48;gmail&#46;com">Dr<span>&#46;</span> Yvan Lucas</a></p>
+</div>
+<span id="document-api/index"></span><div class="section" id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<span id="document-api/main"></span><div class="section" id="main-functions">
+<h3>Main functions<a class="headerlink" href="#main-functions" title="Permalink to this headline">¶</a></h3>
+<span class="target" id="module-main"></span><dl class="py function">
+<dt id="main.create_geneIDsDF">
+<code class="sig-prename descclassname">main.</code><code class="sig-name descname">create_geneIDsDF</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.create_geneIDsDF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function to create a gene ID dataframe</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main.create_sparseDB">
+<code class="sig-prename descclassname">main.</code><code class="sig-name descname">create_sparseDB</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.create_sparseDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function to create a sparse kmer-count matrix</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main.train_test_model_batch">
+<code class="sig-prename descclassname">main.</code><code class="sig-name descname">train_test_model_batch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.train_test_model_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function to train and test in batch</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main.train_test_model_stream">
+<code class="sig-prename descclassname">main.</code><code class="sig-name descname">train_test_model_stream</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.train_test_model_stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function to train and test in streaming</p>
+</dd></dl>
+
+</div>
+<span id="document-api/data"></span><div class="section" id="dataset-dataloaders">
+<h3>Dataset &amp; DataLoaders<a class="headerlink" href="#dataset-dataloaders" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="module-data.Kmercount_to_matrix">
+<span id="kmer-count-based-matrix"></span><h4>Kmer-count based matrix<a class="headerlink" href="#module-data.Kmercount_to_matrix" title="Permalink to this headline">¶</a></h4>
+<p>This class allows us to iterate over fastas file, count kmers using the class KmerExtractionandCount and create a
+scipy sparse csr matrix or a pandas dataframe using these kmers counts</p>
+<span class="target" id="module-data.Kmer_parser"></span><p>Parse kmers from a fasta file using command-line softwares (DSK or Gerbil)
+DSK: <a class="reference external" href="https://github.com/GATB/dsk">https://github.com/GATB/dsk</a>
+Gerbil: <a class="reference external" href="https://github.com/uni-halle/gerbil">https://github.com/uni-halle/gerbil</a>
+class called in KmersCount2Dataframe class</p>
+</div>
+<div class="section" id="module-data.plfam_to_matrix">
+<span id="genes-id-based-matrix"></span><h4>Genes-id based matrix<a class="headerlink" href="#module-data.plfam_to_matrix" title="Permalink to this headline">¶</a></h4>
+<p>Use the class plfam_parser to parse plfams and create a pandas dataframe of plfams for AMR prediction</p>
+<span class="target" id="module-data.plfam_parser"></span><p>Parse the plfam list (list of genes identifiers) for a given strain using the PATRIC.features.tab sheet.</p>
+</div>
+<div class="section" id="module-data.kmer_gene_correspondance">
+<span id="kmer-genes-correspondance"></span><h4>Kmer/Genes correspondance<a class="headerlink" href="#module-data.kmer_gene_correspondance" title="Permalink to this headline">¶</a></h4>
+<p>This class allows us to pairwise iterate over fastas and PATRIC.features.tab files, parse the genes sequences contained
+in the DNA sequence and associate the kmers with the genes they appear in in a dictionary.</p>
+</div>
+</div>
+<span id="document-api/learning"></span><div class="section" id="learning">
+<h3>Learning<a class="headerlink" href="#learning" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="train-test-in-batch-mode">
+<h4>Train &amp; test in batch mode<a class="headerlink" href="#train-test-in-batch-mode" title="Permalink to this headline">¶</a></h4>
+<span class="target" id="module-learning.Train_kmer_clf"></span><p>Train in batch version and optionnally test in batch settings
+Also optimize the treshold for computing accuracies</p>
+</div>
+<div class="section" id="test-in-streaming-mode">
+<h4>Test in streaming mode<a class="headerlink" href="#test-in-streaming-mode" title="Permalink to this headline">¶</a></h4>
+<span class="target" id="module-learning.Test_streaming"></span><p>Test in stream settings
+Also optionally prune the classifier discarding trees that use</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="project-home">
+<h1>Project home<a class="headerlink" href="#project-home" title="Permalink to this headline">¶</a></h1>
+<p>Github <a class="reference external" href="https://github.etc">repo</a>.</p>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Yvan Lucas
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

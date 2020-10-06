@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="[en]" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dataset &amp; DataLoaders &mdash; MAGITICS [] documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Learning" href="learning.html" />
+    <link rel="prev" title="Main functions" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> MAGITICS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../docs/index.html">MAGITICS &#64;CBIB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/index.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/index.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/index.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/index.html#input-format">Input format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/index.html#output-format">Output format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/index.html#contact">Contact</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main.html">Main functions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dataset &amp; DataLoaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-data.Kmercount_to_matrix">Kmer-count based matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-data.plfam_to_matrix">Genes-id based matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-data.kmer_gene_correspondance">Kmer/Genes correspondance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="learning.html">Learning</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MAGITICS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>Dataset &amp; DataLoaders</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/data.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dataset-dataloaders">
+<h1>Dataset &amp; DataLoaders<a class="headerlink" href="#dataset-dataloaders" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-data.Kmercount_to_matrix">
+<span id="kmer-count-based-matrix"></span><h2>Kmer-count based matrix<a class="headerlink" href="#module-data.Kmercount_to_matrix" title="Permalink to this headline">¶</a></h2>
+<p>This class allows us to iterate over fastas file, count kmers using the class KmerExtractionandCount and create a
+scipy sparse csr matrix or a pandas dataframe using these kmers counts</p>
+<dl class="py function">
+<dt id="data.Kmercount_to_matrix.clean_temp_directories">
+<code class="sig-prename descclassname">data.Kmercount_to_matrix.</code><code class="sig-name descname">clean_temp_directories</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">kmer</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.Kmercount_to_matrix.clean_temp_directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete the intermediate file that were created during the command line call of the kmer-parser</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kmer</strong> -- kmer object from which the path are extracted</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.Kmercount_to_matrix.create_sparse_coos">
+<code class="sig-prename descclassname">data.Kmercount_to_matrix.</code><code class="sig-name descname">create_sparse_coos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.Kmercount_to_matrix.create_sparse_coos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over the keys of the kmerdict containing the kmer_counts of all the strains in order to gather coordinates
+and datas informations for creating the sparse_csr matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>coordinates and values of kmercount for the sparse matrix</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>rows, cols, datas</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.Kmercount_to_matrix.extend_kmerdicts">
+<code class="sig-prename descclassname">data.Kmercount_to_matrix.</code><code class="sig-name descname">extend_kmerdicts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">kmer</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.Kmercount_to_matrix.extend_kmerdicts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge all individual kmer_count dictionaries created with kmers_parser into a dictionary of the form
+{kmer1:{strain_a:count, strain_b:count}, kmer2:{strain_a:count, strain_c:count...},...}
+:param kmer: object of the class kmers_parser containing a dict {kmer1:count, kmer2:count,...}</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.Kmercount_to_matrix.populate_sparse_matrix">
+<code class="sig-prename descclassname">data.Kmercount_to_matrix.</code><code class="sig-name descname">populate_sparse_matrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">rows</span></em>, <em class="sig-param"><span class="n">cols</span></em>, <em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.Kmercount_to_matrix.populate_sparse_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a sparse_csr matrix with the coordinates contained in rows cols, data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rows</strong> -- list of row coordinates</p></li>
+<li><p><strong>cols</strong> -- list of cols coordinates</p></li>
+<li><p><strong>data</strong> -- kmer count values for the coordinates</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.Kmercount_to_matrix.run">
+<code class="sig-prename descclassname">data.Kmercount_to_matrix.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.Kmercount_to_matrix.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run method to wrap the class methods and create the kmer count sparse matrix</p>
+</dd></dl>
+
+<span class="target" id="module-data.Kmer_parser"></span><p>Parse kmers from a fasta file using command-line softwares (DSK or Gerbil)
+DSK: <a class="reference external" href="https://github.com/GATB/dsk">https://github.com/GATB/dsk</a>
+Gerbil: <a class="reference external" href="https://github.com/uni-halle/gerbil">https://github.com/uni-halle/gerbil</a>
+class called in KmersCount2Dataframe class</p>
+<dl class="py function">
+<dt id="data.Kmer_parser.count_kmers_dsk">
+<code class="sig-prename descclassname">data.Kmer_parser.</code><code class="sig-name descname">count_kmers_dsk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.Kmer_parser.count_kmers_dsk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the kmer-count file generated by DSK in a dictionnary of the form {kmer: count} for the considered strain</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.Kmer_parser.count_kmers_gerbil">
+<code class="sig-prename descclassname">data.Kmer_parser.</code><code class="sig-name descname">count_kmers_gerbil</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.Kmer_parser.count_kmers_gerbil" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the kmer-count file generated by gerbil in a dictionnary of the form {kmer: count} for the considered strain</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.Kmer_parser.parse_kmers_dsk">
+<code class="sig-prename descclassname">data.Kmer_parser.</code><code class="sig-name descname">parse_kmers_dsk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.Kmer_parser.parse_kmers_dsk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the DSK software to create a kmer-count file from the fasta file containing contigs</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.Kmer_parser.parse_kmers_gerbil">
+<code class="sig-prename descclassname">data.Kmer_parser.</code><code class="sig-name descname">parse_kmers_gerbil</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.Kmer_parser.parse_kmers_gerbil" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the gerbil software to create a kmer-count file from the fasta file containing contigs</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.plfam_to_matrix">
+<span id="genes-id-based-matrix"></span><h2>Genes-id based matrix<a class="headerlink" href="#module-data.plfam_to_matrix" title="Permalink to this headline">¶</a></h2>
+<p>Use the class plfam_parser to parse plfams and create a pandas dataframe of plfams for AMR prediction</p>
+<dl class="py function">
+<dt id="data.plfam_to_matrix.fill_dic">
+<code class="sig-prename descclassname">data.plfam_to_matrix.</code><code class="sig-name descname">fill_dic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">dicdata</span></em>, <em class="sig-param"><span class="n">ls_plfams</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.plfam_to_matrix.fill_dic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use dicdata and ls_plfams to create a dictionary (dic_df) from which a Pandas dataframe can be created</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dicdata</strong> -- dic {strainID: [plfams contained in the strain genome]</p></li>
+<li><p><strong>ls_plfams</strong> -- list of unique plfams</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary from which a Pandas dataframe can be created</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dic_df</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.plfam_to_matrix.get_list_plfams">
+<code class="sig-prename descclassname">data.plfam_to_matrix.</code><code class="sig-name descname">get_list_plfams</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">dic_data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.plfam_to_matrix.get_list_plfams" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the list of unique plfams for initiating the pandas dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dic_data</strong> -- {strain1:[plfam1, plfam2, ...]}</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of unique plfams</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.plfam_to_matrix.run">
+<code class="sig-prename descclassname">data.plfam_to_matrix.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.plfam_to_matrix.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run method to wrap the class methods and create the plfams Pandas dataframe</p>
+</dd></dl>
+
+<span class="target" id="module-data.plfam_parser"></span><p>Parse the plfam list (list of genes identifiers) for a given strain using the PATRIC.features.tab sheet.</p>
+<dl class="py function">
+<dt id="data.plfam_parser.run">
+<code class="sig-prename descclassname">data.plfam_parser.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.plfam_parser.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate through the lines of the PATRIC.features.tab file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>prediction target</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of plfams in the file (some may appear twice since genes are sometimes redundant), y</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.kmer_gene_correspondance">
+<span id="kmer-genes-correspondance"></span><h2>Kmer/Genes correspondance<a class="headerlink" href="#module-data.kmer_gene_correspondance" title="Permalink to this headline">¶</a></h2>
+<p>This class allows us to pairwise iterate over fastas and PATRIC.features.tab files, parse the genes sequences contained
+in the DNA sequence and associate the kmers with the genes they appear in in a dictionary.</p>
+<dl class="py function">
+<dt id="data.kmer_gene_correspondance.build_kmer_gene_dict">
+<code class="sig-prename descclassname">data.kmer_gene_correspondance.</code><code class="sig-name descname">build_kmer_gene_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">dic_kmer_gene</span></em>, <em class="sig-param"><span class="n">dic_gene</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.kmer_gene_correspondance.build_kmer_gene_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each geneseq in dic_genes, parse kmers and fill dic_kmer_gene</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dic_kmer_gene</strong> -- {kmer:[pgfam1, pgfam2, ..]}</p></li>
+<li><p><strong>dic_gene</strong> -- {pgfam:[seq1, seq2, ..]}</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>{kmer:[pgfam1, pgfam2, ..]}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>filled dic_kmer_gene</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.kmer_gene_correspondance.extract_genes_from_seq">
+<code class="sig-prename descclassname">data.kmer_gene_correspondance.</code><code class="sig-name descname">extract_genes_from_seq</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">contigs</span></em>, <em class="sig-param"><span class="n">dic_limits</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.kmer_gene_correspondance.extract_genes_from_seq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the genes limits in dic_limits to extract genes sequences from the fasta</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>contigs</strong> -- list of assembled DNA sequence (contigs)</p></li>
+<li><p><strong>dic_limits</strong> -- {'plfam':[(limit1, limit2), numcontig],..}</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>{'plfam':[geneseq1, geneseq2],..}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dic_genes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.kmer_gene_correspondance.extract_sequence">
+<code class="sig-prename descclassname">data.kmer_gene_correspondance.</code><code class="sig-name descname">extract_sequence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">pathtofile</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.kmer_gene_correspondance.extract_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a list of contigs DNA sequences from the fasta file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pathtofile</strong> -- path to the fasta file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of assembled DNA sequence (contigs)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>contigs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.kmer_gene_correspondance.get_genes_from_kmers">
+<code class="sig-prename descclassname">data.kmer_gene_correspondance.</code><code class="sig-name descname">get_genes_from_kmers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.kmer_gene_correspondance.get_genes_from_kmers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method used to understand results</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.kmer_gene_correspondance.get_genes_limit">
+<code class="sig-prename descclassname">data.kmer_gene_correspondance.</code><code class="sig-name descname">get_genes_limit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">pathtofile</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.kmer_gene_correspondance.get_genes_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a dictionary of the form {'plfam':[(limit1, limit2), numcontig],..}</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pathtofile</strong> -- path to the .PATRIC.features.tab</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>{'plfam':[(limit1, limit2), numcontig],..}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dic_limits</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.kmer_gene_correspondance.kmers_within_gene">
+<code class="sig-prename descclassname">data.kmer_gene_correspondance.</code><code class="sig-name descname">kmers_within_gene</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">geneseq</span></em>, <em class="sig-param"><span class="n">len_kmers</span><span class="o">=</span><span class="default_value">31</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.kmer_gene_correspondance.kmers_within_gene" title="Permalink to this definition">¶</a></dt>
+<dd><p>extract kmers from geneseq</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>geneseq</strong> -- DNA sequence</p></li>
+<li><p><strong>len_kmers</strong> -- len of the kmer extracted</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>liste of kmers contained in geneseq</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ls_kmers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.kmer_gene_correspondance.run">
+<code class="sig-prename descclassname">data.kmer_gene_correspondance.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data.kmer_gene_correspondance.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run method to wrap the class methods and create the dic_kmer_gene
+dic_kmer_gene: {kmer:[pgfam1, pgfam2, ..]}</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="learning.html" class="btn btn-neutral float-right" title="Learning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="main.html" class="btn btn-neutral float-left" title="Main functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Yvan Lucas
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

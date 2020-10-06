@@ -1,0 +1,560 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="[en]" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Learning &mdash; MAGITICS [] documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Dataset &amp; DataLoaders" href="data.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> MAGITICS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../docs/index.html">MAGITICS Readme</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main.html">Main functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Dataset &amp; DataLoaders</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Learning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-learning.Train_kmer_clf">Train &amp; test in batch mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-learning.Test_streaming">Test in streaming mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MAGITICS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>Learning</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/learning.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="learning">
+<h1>Learning<a class="headerlink" href="#learning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-learning.Train_kmer_clf">
+<span id="train-test-in-batch-mode"></span><h2>Train &amp; test in batch mode<a class="headerlink" href="#module-learning.Train_kmer_clf" title="Permalink to this headline">¶</a></h2>
+<p>Train in batch version and optionnally test in batch settings
+Also optimize the treshold for computing accuracies</p>
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.adapted_accuracy">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">adapted_accuracy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">y_test</span></em>, <em class="sig-param"><span class="n">y_pred</span></em>, <em class="sig-param"><span class="n">treshold</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.adapted_accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict accuracy with respect to a calculated treshold (inherited from Test_streaming class)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_test</strong> -- ground truth vector</p></li>
+<li><p><strong>y_pred</strong> -- prediction vector</p></li>
+<li><p><strong>treshold</strong> -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>adapted accuracy score</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.chi2_feature_selection">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">chi2_feature_selection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">X_train</span></em>, <em class="sig-param"><span class="n">X_test</span></em>, <em class="sig-param"><span class="n">y_train</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.chi2_feature_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refactor X_train and X_test only keeping features that are correlated with the target y_train</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_train</strong> -- train numpy array</p></li>
+<li><p><strong>X_test</strong> -- test numpy array</p></li>
+<li><p><strong>y_train</strong> -- train target variable vector</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>refined X_train and X_test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.evaluate_and_write_report">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">evaluate_and_write_report</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">y_test</span></em>, <em class="sig-param"><span class="n">y_pred</span></em>, <em class="sig-param"><span class="n">treshold</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.evaluate_and_write_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict scores and write report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_test</strong> -- ground truth vector</p></li>
+<li><p><strong>y_pred</strong> -- prediction vector</p></li>
+<li><p><strong>treshold</strong> -- </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.fit">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">X_train</span></em>, <em class="sig-param"><span class="n">y_train</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit the chosen classifier using gridsearch cross validation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_train</strong> -- input data matrix</p></li>
+<li><p><strong>y_train</strong> -- ground truth vector</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.get_accuracy_treshold">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">get_accuracy_treshold</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">X_train</span></em>, <em class="sig-param"><span class="n">y_train</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.get_accuracy_treshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the treshold to obtain the best accuracy on the train set</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_train</strong> -- input data matrix</p></li>
+<li><p><strong>y_train</strong> -- ground truth vector</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>treshold value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.plot_CV_heatmap">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">plot_CV_heatmap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.plot_CV_heatmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot gridsearchCV heatmap</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.plot_boosting_learning_curve">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">plot_boosting_learning_curve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">X_test</span></em>, <em class="sig-param"><span class="n">y_test</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.plot_boosting_learning_curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot boosting learning curve (test/train deviance = f (n_estimator) )</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_test</strong> -- input data matrix</p></li>
+<li><p><strong>y_test</strong> -- ground truth vector</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.predict">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">X_test</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Batch predict of X_test labels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X_test</strong> -- input data matrix</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>prediction vector</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>y_predict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.preprocess_y">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">preprocess_y</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.preprocess_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform y into a binary vector</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.run">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run method to wrap the class methods, train and optionnaly test the model in batch settings</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Train_kmer_clf.split_train_test">
+<code class="sig-prename descclassname">learning.Train_kmer_clf.</code><code class="sig-name descname">split_train_test</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Train_kmer_clf.split_train_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split the data matrix and target vector into train and test matrices and vector</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>X_train, X_test, y_train, y_test</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-learning.Test_streaming">
+<span id="test-in-streaming-mode"></span><h2>Test in streaming mode<a class="headerlink" href="#module-learning.Test_streaming" title="Permalink to this headline">¶</a></h2>
+<p>Test in stream settings
+Also optionally prune the classifier discarding trees that use</p>
+<dl class="py function">
+<dt id="learning.Test_streaming.adapted_accuracy">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">adapted_accuracy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">y_test</span></em>, <em class="sig-param"><span class="n">y_preds</span></em>, <em class="sig-param"><span class="n">tres</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.adapted_accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict accuracy score with respect to a pre-calculated treshold</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_test</strong> -- ground truth vector</p></li>
+<li><p><strong>y_preds</strong> -- prediction vector</p></li>
+<li><p><strong>tres</strong> -- treshold</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>adapted accuracy score</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.append_prediction">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">append_prediction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">X_test</span></em>, <em class="sig-param"><span class="n">y_preds</span></em>, <em class="sig-param"><span class="n">y_pruned</span></em>, <em class="sig-param"><span class="n">y_test</span></em>, <em class="sig-param"><span class="n">ls_index</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.append_prediction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict and append predictions to prediction vectors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_test</strong> -- input data matrix</p></li>
+<li><p><strong>y_preds</strong> -- prediction list</p></li>
+<li><p><strong>y_pruned</strong> -- pruned prediction list</p></li>
+<li><p><strong>y_test</strong> -- ground truth list</p></li>
+<li><p><strong>ls_index</strong> -- list of trees index to use for pruned prediction</p></li>
+<li><p><strong>y</strong> -- labels of the current batch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>y_preds, y_pruned, y_test</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.clean_temp_directories">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">clean_temp_directories</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.clean_temp_directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the intermediate file that were created during the command line call of the kmer-parser</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.create_sparse_coos">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">create_sparse_coos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">cols</span></em>, <em class="sig-param"><span class="n">rows</span></em>, <em class="sig-param"><span class="n">datas</span></em>, <em class="sig-param"><span class="n">col</span></em>, <em class="sig-param"><span class="n">row</span></em>, <em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.create_sparse_coos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend existing list of coordinates with new coordinates corresponding to the kmers counts of the current file</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.evaluate_and_write_report">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">evaluate_and_write_report</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">y_preds</span></em>, <em class="sig-param"><span class="n">y_test</span></em>, <em class="sig-param"><span class="n">tres</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pruned</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.evaluate_and_write_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute several evaluation metrics and save them in a score dictionary,
+then write report containing prediction parameters and scores.
+:param y_preds: prediction vector
+:param y_test: ground truth vector
+:param tres: adated accuracy treshold
+:param pruned: indicator if we are in a pruned setting or not</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.get_kmer_counts">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">get_kmer_counts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">kmercountfile</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.get_kmer_counts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse kmer_counts from the kmercountfile generated using dsk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kmercountfile</strong> -- pathtokmercountfile</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>{kmer1:count, kmer2: count, ...}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>kmer_count dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.map_data_to_coords">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">map_data_to_coords</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">kmer_count</span></em>, <em class="sig-param"><span class="n">batchnumber</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.map_data_to_coords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over kmer_count dict to fill coordinates vector</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kmer_count</strong> -- dict {kmer1:count, kmer2: count, ...}</p></li>
+<li><p><strong>batchnumber</strong> -- iteration counter of the current batch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>coordinate lists</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.parse_and_map_kmers">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">parse_and_map_kmers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">fastaname</span></em>, <em class="sig-param"><span class="n">batchnumber</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.parse_and_map_kmers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse kmers_count using dsk and &quot;get_kmer_counts&quot; method
+and map them to the correct coordinates using the &quot;map_data_to_coords&quot; method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fastaname</strong> -- path to the fasta file</p></li>
+<li><p><strong>batchnumber</strong> -- iteration counter of the current batch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>coordinates lists, label</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.parse_kmers_dsk">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">parse_kmers_dsk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">fastaname</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.parse_kmers_dsk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a kmercount file using the command line software dsk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fastaname</strong> -- path to the fasta file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.populate_sparse_matrix">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">populate_sparse_matrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">cols</span></em>, <em class="sig-param"><span class="n">rows</span></em>, <em class="sig-param"><span class="n">datas</span></em>, <em class="sig-param"><span class="n">batchsize</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.populate_sparse_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a sparse matrix using coordinate vectors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cols</strong> -- coordinate vector</p></li>
+<li><p><strong>rows</strong> -- coordinate vector</p></li>
+<li><p><strong>datas</strong> -- data vector</p></li>
+<li><p><strong>batchsize</strong> -- </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.predict_pruned">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">predict_pruned</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">X_test</span></em>, <em class="sig-param"><span class="n">ls_index</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.predict_pruned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict using only trees retained by the method prune boosting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_test</strong> -- input data matrix</p></li>
+<li><p><strong>ls_index</strong> -- list of trees index to use for pruned prediction</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>prediction vector</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.prune_boosting">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">prune_boosting</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.prune_boosting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prune boosting according to the kmer redundancy:
+if two very redundant kmers are used for the prediction:
+prune one of the two trees of depth=1 with the least importance</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.run">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run method to wrap the class methods and test in stream settings</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="learning.Test_streaming.write_report">
+<code class="sig-prename descclassname">learning.Test_streaming.</code><code class="sig-name descname">write_report</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">score</span></em>, <em class="sig-param"><span class="n">pruned</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#learning.Test_streaming.write_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write report containing prediction parameters and scores</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>score</strong> -- dict containing evaluation metrics values</p></li>
+<li><p><strong>pruned</strong> -- indicator if we are in a pruned setting or not</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="data.html" class="btn btn-neutral float-left" title="Dataset &amp; DataLoaders" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Yvan Lucas
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
