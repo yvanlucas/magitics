@@ -1,5 +1,6 @@
 import argparse
 # PATHs
+
 id='8'
 
 xp_name = 'strept_pneumo_31'
@@ -34,6 +35,10 @@ elif mode == 'laptop':
     testdir='test'
 
 # Kmer extraction parameters
+
+kmer_count = 1  # 1: kmer count, 0: presence/absence
+len_kmers = 20
+MIC=False
 
 min_abundance = 3 #not used atm
 kmer_count=1 #1: kmer count, 0: presence/absence

@@ -42,18 +42,18 @@ dfter=df+dfbis
 c=dfter.describe(include='all')
 """
 
-with open('/home/ylucas/toydata_pseudomonas_levofloxacin/traindata/Resistant287.8519.fa','r') as f:
-    lines=f.readlines()
-ls_lengths=[]
-
-len_contig=0
-for line in lines:
-    if(len(line))>10 & (len(line))<100:
-        len_contig+= len(line)
-    elif (len(line))<10:
-        ls_lengths.append(len_contig)
-        len_contig=0
-print(ls_lengths)
+# with open('/home/ylucas/toydata_pseudomonas_levofloxacin/traindata/Resistant287.8519.fa','r') as f:
+#     lines=f.readlines()
+# ls_lengths=[]
+#
+# len_contig=0
+# for line in lines:
+#     if(len(line))>10 & (len(line))<100:
+#         len_contig+= len(line)
+#     elif (len(line))<10:
+#         ls_lengths.append(len_contig)
+#         len_contig=0
+# print(ls_lengths)
 
 #TODO doc louvic example
 # POUR APPELER:
@@ -103,3 +103,10 @@ print(ls_lengths)
                   [2, 3]])
        )
    """
+import pandas as pd
+import numpy as np
+df=pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
+
+df = pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
+row = np.where(df.values == 'SP1')[0]
+print(df['chloramphenicol'].values[row])

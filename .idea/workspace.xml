@@ -2,175 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efdf6f3e-cc0d-40ad-a640-7563160e00d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/doctrees/environment.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/doctrees/index.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/.buildinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_sources/index.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/alabaster.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/basic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/badge_only.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/Roboto-Slab-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/Roboto-Slab-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/Roboto-Slab-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/Roboto-Slab-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-bold-italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-bold-italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-normal-italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-normal-italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/css/theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/doctools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/documentation_options.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/file.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-bold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-bolditalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-bolditalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-bolditalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-bolditalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-italic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Lato/lato-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Roboto-Slab-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Roboto-Slab-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Roboto-Slab-Light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Roboto-Slab-Light.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Roboto-Slab-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Roboto-Slab-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Roboto-Slab-Thin.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/Roboto-Slab-Thin.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/RobotoSlab/roboto-slab-v7-bold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/RobotoSlab/roboto-slab-v7-bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/RobotoSlab/roboto-slab-v7-bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/RobotoSlab/roboto-slab-v7-bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/RobotoSlab/roboto-slab-v7-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/RobotoSlab/roboto-slab-v7-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/RobotoSlab/roboto-slab-v7-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/RobotoSlab/roboto-slab-v7-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/lato-bold-italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/lato-bold-italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/lato-bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/lato-bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/lato-normal-italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/lato-normal-italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/lato-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/fonts/lato-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/jquery-3.5.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/js/badge_only.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/js/html5shiv-printshiv.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/js/html5shiv.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/js/modernizr.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/js/theme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/language_data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/minus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/pygments.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/searchtools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/underscore-1.3.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/underscore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/genindex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/objects.inv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/searchindex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/make.bat" beforeDir="false" afterPath="$PROJECT_DIR$/docs/make.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/EGG-INFO/DESCRIPTION.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/EGG-INFO/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/EGG-INFO/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/EGG-INFO/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/EGG-INFO/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/EGG-INFO/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/EGG-INFO/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/man/man1/nosetests.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/__main__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/case.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/commands.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/core.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/exc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/ext/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/ext/dtcompat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/failure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/importer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/inspector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/allmodules.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/attrib.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/builtin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/capture.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/collect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/cover.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/debug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/deprecated.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/doctests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/errorclass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/failuredetail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/isolate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/logcapture.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/multiprocess.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/plugintest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/prof.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/skip.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/testid.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/plugins/xunit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/proxy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/pyversion.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/result.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/selector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/sphinx/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/sphinx/pluginopts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/suite.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/tools/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/tools/nontrivial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/tools/trivial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/twistedtools.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/usage.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/.eggs/nose-1.3.7-py3.6.egg/nose/util.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/build/temp.linux-x86_64-3.6/cpp_extensions/solver.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/build/temp.linux-x86_64-3.6/cpp_extensions/utility_python_bindings.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/dist/pyscm-1.0.0-py3.6-linux-x86_64.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/pyscm.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/pyscm.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/pyscm.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/pyscm.egg-info/requires.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyscm-master/pyscm.egg-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/pseudomonas_aeruginosa_reference.fa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magitics/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/magitics/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magitics/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/magitics/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magitics/learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/magitics/learning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magitics/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/magitics/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,19 +25,55 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.test">
+    <configuration name="data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MAGITICS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/magitics" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/magitics/data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MAGITICS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MAGITICS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/magitics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAGITICS/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/magitics/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MAGITICS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/magitics" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/magitics/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -211,7 +84,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -227,13 +104,13 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2162" y="187" key="SettingsEditor" timestamp="1601985632674">
+    <state x="2162" y="187" key="SettingsEditor" timestamp="1602080625968">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="2162" y="187" key="SettingsEditor/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1601985632674" />
-    <state x="2336" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1601911561681">
+    <state x="2162" y="187" key="SettingsEditor/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1602080625968" />
+    <state x="2336" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1602074648174">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="2336" y="257" width="672" height="678" key="search.everywhere.popup/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1601911561681" />
+    <state x="2336" y="257" width="672" height="678" key="search.everywhere.popup/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1602074648174" />
   </component>
 </project>

@@ -100,16 +100,19 @@ class plfam_parser(object):
         Returns:
             list of plfams in the file (some may appear twice since genes are sometimes redundant), y: prediction target
         """
-        plfams = []
-        with open(self.pathtofile, 'r') as f:
-            lines = f.readlines()
+        # plfams = []
+        # with open(self.pathtofile, 'r') as f:
+        #     lines = f.readlines()
+        # for line in lines:
+        #     try:
+        #         plfams.append(line.split('\t')[16])
+        #     except Exception as e:
+        #         print(e)
+        #         print(line.split('\t'))
+
+        df=pd.read_csv(self.pathtofile, sep='\t')
+        plfams=df['plfam_id'].to_list()
         y = self.strainID[:9]
-        for line in lines:
-            try:
-                plfams.append(line.split('\t')[16])
-            except Exception as e:
-                print(e)
-                print(line.split('\t'))
         return plfams, y
 
 
@@ -152,7 +155,6 @@ class plfam_to_matrix(object):
         """
         dic_df = {}
         for strainID in dicdata:
-            print(strainID)
             dic_df[strainID] = {}
             for plfam in ls_plfams:
                 dic_df[strainID][plfam] = 0
@@ -169,7 +171,6 @@ class plfam_to_matrix(object):
         for filename in os.listdir(os.path.join(cfg.pathtodata, cfg.data)):
             print(filename)
             strainID = filename.split('/')[-1][:-20]
-            print(strainID)
             parser = plfam_parser(strainID)
             plfams, y = parser.run()
             targets.append(y)
@@ -194,10 +195,8 @@ class Kmercount_to_matrix(object):
         #    print("loading kmers dictionary")
         #    with open(os.path.join(cfg.pathtoxp, cfg.xp_name, "kmerdicts.pkl"), "rb") as f:
         #        self.kmerdicts = pickle.load(f)
-
-        #self.strain_to_index = {strain: i for i, strain in zip(range(len(self.strains)), self.strains)}
-        #self.kmer_to_index = {kmer: i for i, kmer in enumerate(self.kmerdicts)}
         return
+
 
     def extend_kmerdicts(self, kmer):
         """
@@ -288,6 +287,22 @@ class Kmercount_to_matrix(object):
         # cleantempcmd="rm -rf %s" % (self.kmer.pathtosavetemp)
         # os.system(cleantempcmd)
 
+
+    def get_label_from_csv_metadata(self, strain):
+        """
+        Get label from csv metadata
+
+        Args:
+            strain: strainID
+
+        Returns:
+            label
+        """
+        import pandas as pd
+        df = pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
+        row=np.where(df.values==strain)[0]
+        return df['chloramphenicol'].values[row]
+
     def run(self):
         """
         Run method to wrap the class methods and create the kmer count sparse matrix
@@ -300,12 +315,12 @@ class Kmercount_to_matrix(object):
             kmer.parse_kmers_dsk()
             kmer.count_kmers_dsk()
             self.strains.append(kmer.strainnumber)
-            self.labels.append(kmer.label)
+            #self.labels.append(kmer.label)
+            self.labels.append(self.get_label_from_csv_metadata(kmer.strainnumber))
             self.extend_kmerdicts(kmer)
             # self.clean_temp_directories(kmer)
         self.strain_to_index = {strain: i for i, strain in zip(range(len(self.strains)), self.strains)}
         self.kmer_to_index = {kmer: i for i, kmer in enumerate(self.kmerdicts)}
-
         rows, cols, data = self.create_sparse_coos()
         self.populate_sparse_matrix(rows, cols, data)
 
