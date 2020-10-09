@@ -189,13 +189,15 @@ class Kmercount_to_matrix(object):
     """
 
     def __init__(self):
-        if not self.kmerdicts:
-            print("loading kmers dictionary")
-            with open(os.path.join(cfg.pathtoxp, cfg.xp_name, "kmerdicts.pkl"), "rb") as f:
-                self.kmerdicts = pickle.load(f)
+        #self.kmerdicts=0
+        #if not self.kmerdicts:
+        #    print("loading kmers dictionary")
+        #    with open(os.path.join(cfg.pathtoxp, cfg.xp_name, "kmerdicts.pkl"), "rb") as f:
+        #        self.kmerdicts = pickle.load(f)
 
-        self.strain_to_index = {strain: i for i, strain in zip(range(len(self.strains)), self.strains)}
-        self.kmer_to_index = {kmer: i for i, kmer in enumerate(self.kmerdicts)}
+        #self.strain_to_index = {strain: i for i, strain in zip(range(len(self.strains)), self.strains)}
+        #self.kmer_to_index = {kmer: i for i, kmer in enumerate(self.kmerdicts)}
+        return
 
     def extend_kmerdicts(self, kmer):
         """
@@ -301,6 +303,9 @@ class Kmercount_to_matrix(object):
             self.labels.append(kmer.label)
             self.extend_kmerdicts(kmer)
             # self.clean_temp_directories(kmer)
+        self.strain_to_index = {strain: i for i, strain in zip(range(len(self.strains)), self.strains)}
+        self.kmer_to_index = {kmer: i for i, kmer in enumerate(self.kmerdicts)}
+
         rows, cols, data = self.create_sparse_coos()
         self.populate_sparse_matrix(rows, cols, data)
 
