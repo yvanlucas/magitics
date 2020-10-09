@@ -60,6 +60,9 @@ class Train_kmer_clf(object):
             X_test = None
             y_test = None
         del self.mat, self.y
+        if cfg.MIC==True:
+            y_test=np.log(y_test)
+            y_train=np.log(y_train)
         return X_train, X_test, y_train, y_test
 
     def chi2_feature_selection(self, X_train, X_test, y_train):
@@ -157,7 +160,7 @@ class Train_kmer_clf(object):
         """
         return Test_streaming.adapted_accuracy(self, y_test, y_pred, treshold)
 
-    def evaluate_and_write_report(self, y_test, y_pred, treshold):
+    def evaluate_and_write_report(self, y_pred, y_test, treshold):
         """
         Predict scores and write report
 
@@ -166,7 +169,7 @@ class Train_kmer_clf(object):
             y_pred: prediction vector
             treshold
         """
-        Test_streaming.evaluate_and_write_report(self, y_test, y_pred, treshold)
+        Test_streaming.evaluate_and_write_report(self, y_pred, y_test, treshold)
 
     def plot_CV_heatmap(self):
         """
@@ -211,12 +214,12 @@ class Train_kmer_clf(object):
         """
         self.preprocess_y()
         X_train, X_test, y_train, y_test = self.split_train_test()
-        #        X_train, X_test = self.chi2_feature_selection(X_train, X_test, y_train)
+        # X_train, X_test = self.chi2_feature_selection(X_train, X_test, y_train)
         self.fit(X_train, y_train)
         tres = self.get_accuracy_treshold(X_train, y_train)
         if cfg.dtype == 'df':
             y_predict = self.predict(X_test)
-            self.evaluate_and_write_report(y_test, y_predict, tres)
+            self.evaluate_and_write_report(y_predict, y_test, tres)
             self.plot_CV_heatmap()
             self.plot_boosting_learning_curve(X_test, y_test)
 
@@ -226,6 +229,45 @@ class Train_kmer_clf(object):
                     f,
                     protocol=4)
 
+
+class NN_model(object):
+    """
+    Work in progress: neural network for end classification, because it's nice, and also in order to wrap different input datas
+    of different sources in an architecture.
+    """
+    def __init__(self):
+        return
+
+    def create_model(self, X_train):
+        import tensorflow as tf
+
+        # Complete version
+        model = tf.keras.Sequential([
+            tf.keras.layers.InputLayer(input_shape=(X_train.shape[1],)),  # Input Layer
+            tf.keras.layers.Dense(64, activation='relu'),  # Hidden Layer
+            tf.keras.layers.Dense(1)])  # Output
+
+        # Optional (easy)
+        # Here the InputLayer will be generated automatically
+        # model = tf.keras.Sequential([
+        #     tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)), # Hidden Layer
+        #     tf.keras.layers.Dense(1)]) # Output
+
+        # Compiling our model
+        model.compile(loss='mse',
+                      optimizer=tf.keras.optimizers.RMSprop(),
+                      metrics=['mae'])
+
+        # Summary
+        model.summary()
+        return model
+
+    def fit(self, model, X_train, y_train):
+        model.fit(X_train, y_train, epochs=110, verbose=2)
+
+        loss, mae = model.evaluate(X_val, y_val, verbose=2)
+        y_pred = model.predict(X_test).flatten() #what is flatten
+        return model
 
 
 class Test_streaming(object):
@@ -449,9 +491,10 @@ class Test_streaming(object):
             tres: adated accuracy treshold
             pruned:  indicator if we are in a pruned setting or not
         """
-        le = preprocessing.LabelEncoder()
-        y_test = le.fit_transform(y_test)
+
         score = {}
+        print(np.shape(y_test))
+        print(np.shape(y_preds))
         score["ROC_AUC"] = metrics.roc_auc_score(y_test, y_preds[:, -1])
         if tres==None:
             with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, f"{cfg.model}_tres_value.txt"), "r") as f:
@@ -460,6 +503,7 @@ class Test_streaming(object):
         score["Accuracy"] = metrics.accuracy_score(y_test, y_preds[:, -1].round())
         score["MAE"] = metrics.mean_absolute_error(y_test, y_preds[:, -1])
         score["MSE"] = metrics.mean_squared_error(y_test, y_preds[:, -1])
+        score["MAPE"] = metrics.mean_absolute_percentage_error(y_test, y_preds[:,-1])
         print("*** ROC AUC = ***")
         print(score["ROC_AUC"])
         self.write_report(pruned, score)
@@ -531,6 +575,8 @@ class Test_streaming(object):
                     print(e)
             fileindex += batch
         y_preds = np.vstack(y_preds)
+        le = preprocessing.LabelEncoder()
+        y_test = le.fit_transform(y_test)
         score=self.evaluate_and_write_report(y_preds, y_test)
         print(ls_index)
         with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, f"{cfg.model}_CVresults.pkl"), "wb") as f:

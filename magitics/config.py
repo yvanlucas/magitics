@@ -1,7 +1,7 @@
 import argparse
 
 # PATHs
-id = '8'
+id = '9'
 xp_name = 'pseud_levo_31'
 # xp_name = 'esche_amox_31'
 # xp_name='acineto_imip_20'
@@ -20,7 +20,7 @@ if mode == 'serv':
 elif mode == 'local':
     pathtoxp = '/home/ylucas/toydata_pseudomonas_levofloxacin/'
     pathtodata = '/home/ylucas/toydata_pseudomonas_levofloxacin/'
-    data = 'traindatater'
+    data = 'traindataquattro'
     testdir = 'test/test'
 elif mode == 'laptop':
     pathtoxp = '/home/ylucas/Bureau/expe_postdoc/xp'
@@ -31,6 +31,7 @@ elif mode == 'laptop':
 # Kmer extraction parameters
 kmer_count = 1  # 1: kmer count, 0: presence/absence
 len_kmers = 20
+MIC=False
 
 # Learning parameters
 model = 'gradient'  # can be ['rf', 'gradient', 'Ada']
