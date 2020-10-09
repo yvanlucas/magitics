@@ -19,8 +19,8 @@ if mode == 'serv':
 #    testdir='Escherichia_coli/test/test'
 #    data='Escherichia_coli/traindata/'
 #    data = 'Pseudomonas_aeruginosa/levofloxacin/traindata/'
-    data = 'Streptococcus_pneumoniae/data/'
-    testdir = 'Streptococcus_pneumoniae/test/'
+    data = 'Streptococcus_pneumoniae/datajie/'
+    testdir = 'Streptococcus_pneumoniae/testjie/'
     #data='Acinetobacter_baumanii/traindata/'
     #testdir='Acinetobacter_baumanii/test/test/'
 elif mode == 'local':

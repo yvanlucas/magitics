@@ -291,6 +291,7 @@ class Kmercount_to_matrix(object):
     def get_label_from_csv_metadata(self, strain):
         """
         Get label from csv metadata
+        TODO: pass parameters for col, metadata_path
 
         Args:
             strain: strainID
@@ -299,7 +300,8 @@ class Kmercount_to_matrix(object):
             label
         """
         import pandas as pd
-        df = pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
+        # df = pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
+        df = pd.read_excel('/home/scratch/MAGITICS_data/Streptococcus_pneumoniae/SP_strains_metadata.xlsx')
         row=np.where(df.values==strain)[0]
         return df['chloramphenicol'].values[row]
 

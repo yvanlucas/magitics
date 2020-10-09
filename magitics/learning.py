@@ -392,9 +392,28 @@ class Test_streaming(object):
         """
         self.parse_kmers_dsk(fastaname)
         y = fastaname[:5]
+        y = get_label_from_csv_metadata(fastaname[:-3])
         kmer_count = self.get_kmer_counts(fastaname)
         col, row, data = self.map_data_to_coords(kmer_count, batchnumber)
         return col, row, data, y
+
+    def get_label_from_csv_metadata(self, strain):
+        """
+	Get label from csv metadata
+        TODO: pass parameters for col, metadata_path
+
+        Args:
+            strain: strainID
+
+        Returns:
+            label
+        """
+	import pandas as pd
+        # df = pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
+        df = pd.read_excel('/home/scratch/MAGITICS_data/Streptococcus_pneumoniae/SP_strains_metadata.xlsx')
+        row=np.where(df.values==strain)[0]
+        return df['chloramphenicol'].values[row]
+
 
     def get_kmer_counts(self, kmercountfile):
         """
