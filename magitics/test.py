@@ -110,3 +110,4 @@ df=pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
 df = pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
 row = np.where(df.values == 'SP1')[0]
 print(df['chloramphenicol'].values[row])
+
