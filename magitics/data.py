@@ -301,9 +301,11 @@ class Kmercount_to_matrix(object):
         """
         import pandas as pd
         # df = pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
-        df = pd.read_excel('/home/scratch/MAGITICS_data/Streptococcus_pneumoniae/SP_strains_metadata.xlsx')
+        df = pd.read_excel('/scratch/MAGITICS_data/Streptococcus_pneumoniae/SP_strains_metadata.xlsx')
         row=np.where(df.values==strain)[0]
-        return df['chloramphenicol'].values[row]
+        print('label')
+        print(int(df['chloramphenicol'].values[row]))
+        return int(df['chloramphenicol'].values[row])
 
     def run(self):
         """
@@ -319,6 +321,7 @@ class Kmercount_to_matrix(object):
             self.strains.append(kmer.strainnumber)
             #self.labels.append(kmer.label)
             self.labels.append(self.get_label_from_csv_metadata(kmer.strainnumber))
+            print(self.labels)
             self.extend_kmerdicts(kmer)
             # self.clean_temp_directories(kmer)
         self.strain_to_index = {strain: i for i, strain in zip(range(len(self.strains)), self.strains)}
