@@ -52,8 +52,8 @@ rf_grid = {'max_features': ['sqrt', 'log2'],
 
 SCM_grid = {'p': [1, 10], 'max_rules': [1, 3 ,10], 'model_type':['conjunction','disjunction']}
 
-gradient_grid = {'max_depth': [1,2],
-                 'n_estimators': [6,5,4,3,2, 1]}
+gradient_grid = {'max_depth': [1,2, 4],
+                 'n_estimators': [10, 6,4,2, 1]}
 
 ada_grid =  {'n_estimators': [ 5, 10, 20]}
 

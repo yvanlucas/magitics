@@ -19,7 +19,8 @@ class Train_kmer_clf(object):
             self.clf = ensemble.RandomForestClassifier()
             self.param_grid = cfg.rf_grid
         elif cfg.model == "gradient":
-            self.clf = ensemble.GradientBoostingClassifier(max_depth=4, max_features=None)
+            #self.clf = ensemble.GradientBoostingClassifier(max_depth=4, max_features=None)
+            self.clf = ensemble.GradientBoostingRegressor(max_features=None)
             self.param_grid = cfg.gradient_grid
         elif cfg.model == 'Ada':
             self.clf = ensemble.AdaBoostClassifier()
@@ -42,8 +43,13 @@ class Train_kmer_clf(object):
         # to_drop = ["label", "strain"]
         # X = self.mat.drop(to_drop, axis=1)
         # self.columns = X.columns
-        le = preprocessing.LabelEncoder()
-        self.y = le.fit_transform(self.labels)
+        if cfg.MIC==False:
+            le = preprocessing.LabelEncoder()
+            self.y = le.fit_transform(self.labels)
+        else:
+            print(self.labels)
+            self.y=self.labels
+
 
     def split_train_test(self):
         """
@@ -59,10 +65,8 @@ class Train_kmer_clf(object):
             y_train = self.y
             X_test = None
             y_test = None
+        print(y_train)
         del self.mat, self.y
-        if cfg.MIC==True:
-            y_test=np.log(y_test)
-            y_train=np.log(y_train)
         return X_train, X_test, y_train, y_test
 
     def chi2_feature_selection(self, X_train, X_test, y_train):
@@ -95,7 +99,7 @@ class Train_kmer_clf(object):
 
         """
         self.cv_clf = model_selection.GridSearchCV(estimator=self.clf, param_grid=self.param_grid, cv=2,
-                                                   scoring="accuracy", n_jobs=1)
+                                                   scoring="roc_auc", n_jobs=1)
         self.cv_clf.fit(X_train, y_train)
         self.y_pred = self.cv_clf.predict_proba(X_train)
         with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, f'{cfg.model}_CVresults.pkl'), 'wb') as f:
@@ -392,7 +396,7 @@ class Test_streaming(object):
         """
         self.parse_kmers_dsk(fastaname)
         y = fastaname[:5]
-        y = get_label_from_csv_metadata(fastaname[:-3])
+        y = self.get_label_from_csv_metadata(fastaname[:-3])
         kmer_count = self.get_kmer_counts(fastaname)
         col, row, data = self.map_data_to_coords(kmer_count, batchnumber)
         return col, row, data, y
@@ -408,9 +412,8 @@ class Test_streaming(object):
         Returns:
             label
         """
-	import pandas as pd
         # df = pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
-        df = pd.read_excel('/home/scratch/MAGITICS_data/Streptococcus_pneumoniae/SP_strains_metadata.xlsx')
+        df = pd.read_excel('/scratch/MAGITICS_data/Streptococcus_pneumoniae/SP_strains_metadata.xlsx')
         row=np.where(df.values==strain)[0]
         return df['chloramphenicol'].values[row]
 
