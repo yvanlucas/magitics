@@ -1,0 +1,606 @@
+10
+[2, 4, 8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 8, 4, 4, 2, 4, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 16, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 8, 4, 4, 4, 2, 4, 4, 4, 4, 2, 2, 4, 4, 4, 4, 4, 4, 16, 16, 4, 8, 4, 4, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 4, 2, 2, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 2, 4, 2, 8, 4, 4, 4, 4, 2, 4, 2, 2, 1, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 4, 4, 8, 8, 4, 2, 2, 4, 4, 4, 4, 4, 4, 2, 4]
+[2, 4, 8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 8, 4, 4, 2, 4, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 16, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 8, 4, 4, 4, 2, 4, 4, 4, 4, 2, 2, 4, 4, 4, 4, 4, 4, 16, 16, 4, 8, 4, 4, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 4, 2, 2, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 2, 4, 2, 8, 4, 4, 4, 4, 2, 4, 2, 2, 1, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 4, 4, 8, 8, 4, 2, 2, 4, 4, 4, 4, 4, 4, 2, 4]
+[2, 4, 8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 8, 4, 4, 2, 4, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 16, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 8, 4, 4, 4, 2, 4, 4, 4, 4, 2, 2, 4, 4, 4, 4, 4, 4, 16, 16, 4, 8, 4, 4, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 4, 2, 2, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 2, 4, 2, 8, 4, 4, 4, 4, 2, 4, 2, 2, 1, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 4, 4, 8, 8, 4, 2, 2, 4, 4, 4, 4, 4, 4, 2, 4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996321
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2092852
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1995884
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997221
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1984517
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2061322
+[16]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997550
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2077604
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997366
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1986148
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2000357
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027442
+[16]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2186637
+[16]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997399
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2056955
+[16]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996905
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2061399
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1991861
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2120346
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2042237
+[16]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2047381
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1992838
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2064254
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1982789
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027725
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1995546
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1954209
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1979967
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1980315
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027261
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2037393
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2049714
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027069
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2034005
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2049745
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2000189
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2036863
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1988838
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1995851
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997436
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2033416
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2037035
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2095558
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2001295
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2121022
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1994168
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2090896
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2092823
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027622
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2007182
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2003779
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2048449
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2118071
+[1]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1960053
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1980891
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2002335
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997354
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1985338
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2051405
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997747
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2007322
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996964
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2062289
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1994104
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2016968
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2071339
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2022787
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2046218
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2105658
+[16]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1984733
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2091728
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2070240
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2029156
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1979549
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2032649
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2008252
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2054381
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2016275
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2067255
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2019918
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1994109
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2018179
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997381
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2008218
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2089264
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1985244
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996239
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1984125
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2018481
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2040197
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997717
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2033772
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2232722
+[16]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2076692
+[16]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2038418
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2040882
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2006715
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2051760
+[2]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2049762
+[4]
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2000368
+[8]
+[array([4]), array([2]), array([4]), array([4]), array([2]), array([16]), array([4]), array([4]), array([4]), array([4]), array([4]), array([16]), array([16]), array([2]), array([16]), array([2]), array([2]), array([4]), array([4]), array([16]), array([4]), array([4]), array([4]), array([4]), array([2]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([2]), array([4]), array([2]), array([2]), array([2]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([2]), array([4]), array([4]), array([4]), array([4]), array([4]), array([2]), array([1]), array([4]), array([4]), array([4]), array([2]), array([2]), array([4]), array([4]), array([4]), array([2]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([16]), array([4]), array([4]), array([4]), array([4]), array([4]), array([2]), array([4]), array([2]), array([4]), array([2]), array([2]), array([4]), array([4]), array([4]), array([2]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([16]), array([16]), array([4]), array([4]), array([2]), array([2]), array([4]), array([8])]
+[[3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [5.23403005]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [5.23403005]
+ [3.96112205]
+ [3.96112205]
+ [5.23403005]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [5.23403005]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [5.23403005]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [8.18174433]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [5.23403005]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [5.23403005]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [5.23403005]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [3.96112205]
+ [5.23403005]]
+[2542845]
