@@ -29,6 +29,7 @@ class Train_kmer_clf(object):
         if cfg.dtype == 'sparse':
             with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, "kmers_mats.pkl"), "rb") as f:
                 [self.mat, self.labels, self.strain_to_index, self.kmer_to_index] = pickle.load(f)
+            print(self.labels)
             self.testratio = 0.0
         elif cfg.dtype == 'df':
             with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, "kmers_DF.pkl"), "rb") as f:
@@ -99,9 +100,9 @@ class Train_kmer_clf(object):
 
         """
         self.cv_clf = model_selection.GridSearchCV(estimator=self.clf, param_grid=self.param_grid, cv=2,
-                                                   scoring="roc_auc", n_jobs=1)
+                                                   scoring="neg_mean_squared_error", n_jobs=1)
         self.cv_clf.fit(X_train, y_train)
-        self.y_pred = self.cv_clf.predict_proba(X_train)
+        self.y_pred = self.cv_clf.predict(X_train)
         with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, f'{cfg.model}_CVresults.pkl'), 'wb') as f:
             pickle.dump({"classifier": self.cv_clf, "features": self.kmer_to_index}, f, protocol=4)
 
@@ -115,7 +116,7 @@ class Train_kmer_clf(object):
         Returns:
             y_predict: prediction vector
         """
-        y_predict = self.cv_clf.predict_proba(X_test)
+        y_predict = self.cv_clf.predict(X_test)
         return y_predict
 
 
@@ -220,7 +221,7 @@ class Train_kmer_clf(object):
         X_train, X_test, y_train, y_test = self.split_train_test()
         # X_train, X_test = self.chi2_feature_selection(X_train, X_test, y_train)
         self.fit(X_train, y_train)
-        tres = self.get_accuracy_treshold(X_train, y_train)
+        #tres = self.get_accuracy_treshold(X_train, y_train)
         if cfg.dtype == 'df':
             y_predict = self.predict(X_test)
             self.evaluate_and_write_report(y_predict, y_test, tres)
@@ -377,7 +378,7 @@ class Test_streaming(object):
             y_preds, y_pruned, y_test
 
         """
-        y_preds.extend(self.clf.predict_proba(X_test))
+        y_preds.extend(self.clf.predict(X_test))
         # y_pruned.extend(self.predict_pruned(X_test, ls_index))
         y_test.append(y)
         return y_preds, y_pruned, y_test
@@ -395,8 +396,9 @@ class Test_streaming(object):
             coordinates lists, label
         """
         self.parse_kmers_dsk(fastaname)
-        y = fastaname[:5]
+        #y = fastaname[:5]
         y = self.get_label_from_csv_metadata(fastaname[:-3])
+        print(y)
         kmer_count = self.get_kmer_counts(fastaname)
         col, row, data = self.map_data_to_coords(kmer_count, batchnumber)
         return col, row, data, y
@@ -515,19 +517,19 @@ class Test_streaming(object):
         """
 
         score = {}
-        print(np.shape(y_test))
-        print(np.shape(y_preds))
-        score["ROC_AUC"] = metrics.roc_auc_score(y_test, y_preds[:, -1])
-        if tres==None:
-            with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, f"{cfg.model}_tres_value.txt"), "r") as f:
-                tres = f.readlines()[0]
-        score["Accuracy"] = self.adapted_accuracy(y_test, y_preds, tres)
-        score["Accuracy"] = metrics.accuracy_score(y_test, y_preds[:, -1].round())
+        print(y_test)
+        print(y_preds)
+        #score["ROC_AUC"] = metrics.roc_auc_score(y_test, y_preds[:, -1])
+        #if tres==None:
+        #    with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, f"{cfg.model}_tres_value.txt"), "r") as f:
+        #        tres = f.readlines()[0]
+        #score["Accuracy"] = self.adapted_accuracy(y_test, y_preds, tres)
+        #score["Accuracy"] = metrics.accuracy_score(y_test, y_preds[:, -1].round())
         score["MAE"] = metrics.mean_absolute_error(y_test, y_preds[:, -1])
         score["MSE"] = metrics.mean_squared_error(y_test, y_preds[:, -1])
-        score["MAPE"] = metrics.mean_absolute_percentage_error(y_test, y_preds[:,-1])
-        print("*** ROC AUC = ***")
-        print(score["ROC_AUC"])
+        #score["MAPE"] = metrics.mean_absolute_percentage_error(y_test, y_preds[:,-1])
+        #print("*** ROC AUC = ***")
+        #print(score["ROC_AUC"])
         self.write_report(pruned, score)
         return score
 
@@ -586,7 +588,7 @@ class Test_streaming(object):
                 datas = []
                 col, row, data, y = self.parse_and_map_kmers(file, batchiter)
                 cols, rows, datas = self.create_sparse_coos(cols, rows, datas, col, row, data)
-                y = file[:5]
+                #y = file[:5]
                 batchiter += 1
                 remaining -= 1
                 X_test = self.populate_sparse_matrix(cols, rows, datas, batchiter)
@@ -597,8 +599,8 @@ class Test_streaming(object):
                     print(e)
             fileindex += batch
         y_preds = np.vstack(y_preds)
-        le = preprocessing.LabelEncoder()
-        y_test = le.fit_transform(y_test)
+        #le = preprocessing.LabelEncoder()
+        #y_test = le.fit_transform(y_test)
         score=self.evaluate_and_write_report(y_preds, y_test)
         print(ls_index)
         with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, f"{cfg.model}_CVresults.pkl"), "wb") as f:
