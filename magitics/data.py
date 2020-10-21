@@ -480,6 +480,43 @@ class kmer_gene_correspondance(object):
         with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, 'dic_kmer_gene.pkl'), 'wb') as f:
             pickle.dump(dic_kmer_gene, f)
 
+
+class gff_to_pandas(object):
+    def __init__(self):
+        return
+
+    def gffs_to_dic(self, pathtogff):
+        with open(pathtogff, 'r') as f:
+            lines = f.readlines()
+
+        dic = {}
+        tabsplit = ['scaffold', 'source', 'type', 'start', 'end', 'score', 'strand', 'frame', 'attributes']
+        for line in lines[1:]:
+            print(line)
+            if line[0] == '##seq':
+                continue
+
+            line = line.split('\t')
+            for thing, head in zip(line, tabsplit):
+                dic[head] = thing
+            attributes = dic['attributes'].split(';')
+            for thing in attributes:
+                splitted = thing.split('=')
+                dic[splitted[0]] = splitted[1]
+            inference = dic['inference'].split(':')
+            if len(inference) == 5:
+                dic['prot_fam'] = inference[-1]
+            else:
+                dic['prot_fam'] = 'protein'
+
+        return dic
+
+    def lsdic_to_pandas(self, ls_dic):
+        return
+
+    def run(self):
+        return
+
 # genedf=plfam_to_matrix()
 
 # genedf.run()

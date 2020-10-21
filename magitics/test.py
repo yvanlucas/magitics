@@ -103,11 +103,69 @@ c=dfter.describe(include='all')
                   [2, 3]])
        )
    """
-import pandas as pd
-import numpy as np
-df=pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
+# import pandas as pd
+# import numpy as np
+# import os
+# from collections import Counter
+# path='/home/ylucas/Bureau/Data/levofloxacin/'
+# dfs= []
+# for file in os.listdir(path):
+#     dfs.append(pd.read_csv(os.path.join(path, file), sep='\t'))
+#
+# dfs=pd.concat(dfs, ignore_index=True)
+#
 
-df = pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
-row = np.where(df.values == 'SP1')[0]
-print(df['chloramphenicol'].values[row])
+# dfs['size']=dfs['end']-dfs['start']
+#
+# for plfam in dfs['plfam_id'][:50]:
+#     a=dfs['size'][dfs['plfam_id']==plfam]
+#     b,c = np.unique(a, return_counts=True)
+#     print(b)
+#     print(c)
+#     print(np.sum(c))
+#     print('---')
 
+# from BCBio import GFF
+# from sgt import SGT
+#
+# infile='/home/ylucas/Bureau/annotated_fastas/1313.5461.gff'
+# inhandle=open(infile)
+# for rec in GFF.parse(inhandle):
+#     print(rec)
+
+
+class gff_to_pandas(object):
+    def __init__(self):
+        return
+
+    def gffs_to_dic(self, pathtogff):
+        with open(pathtogff, 'r') as f:
+            lines=f.readlines()
+
+        dic={}
+        tabsplit=['scaffold','source','type','start','end','score','strand','frame','attributes']
+        for line in lines[1:]:
+            print(line)
+            if line[0]=='##seq':
+                continue
+
+            line=line.split('\t')
+            for thing, head in zip(line,tabsplit):
+                dic[head]=thing
+            attributes=dic['attributes'].split(';')
+            for thing in attributes:
+                splitted=thing.split('=')
+                dic[splitted[0]]=splitted[1]
+            inference=dic['inference'].split(':')
+            if len(inference)==5:
+                dic['prot_fam']=inference[-1]
+            else:
+                dic['prot_fam']='protein'
+
+        return dic
+
+    def lsdic_to_pandas(self, ls_dic):
+        return
+
+    def run(self):
+        return
