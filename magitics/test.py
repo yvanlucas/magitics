@@ -142,30 +142,58 @@ class gff_to_pandas(object):
         with open(pathtogff, 'r') as f:
             lines=f.readlines()
 
-        dic={}
+        dic={'scaffold': [], 'source': [], 'type': [], 'start': [], 'end': [],
+         'score': [], 'strand': [], 'frame': [], 'attributes': [], 'ID': [], 'eC_number':[], 'Name': [], 'gene': [],
+         'inference': [], 'locus_tag': [],
+         'product': [], 'prot_fam': [],
+         'note': []}
         tabsplit=['scaffold','source','type','start','end','score','strand','frame','attributes']
         for line in lines[1:]:
-            print(line)
-            if line[0]=='##seq':
+            #print(line)
+            if len(line.split('\t'))<3:
                 continue
 
             line=line.split('\t')
             for thing, head in zip(line,tabsplit):
-                dic[head]=thing
-            attributes=dic['attributes'].split(';')
+
+                dic[head].append(thing)
+            attributes=dic['attributes'][-1].split(';')
             for thing in attributes:
                 splitted=thing.split('=')
-                dic[splitted[0]]=splitted[1]
-            inference=dic['inference'].split(':')
+                dic[splitted[0]].append(splitted[1])
+            inference=dic['inference'][-1].split(':')
             if len(inference)==5:
-                dic['prot_fam']=inference[-1]
+                dic['prot_fam'].append(inference[-1])
             else:
-                dic['prot_fam']='protein'
-
+                dic['prot_fam'].append('protein')
+        todel=['eC_number', 'Name','gene','inference','note']
+        for thing in todel:
+            del(dic[thing])
         return dic
 
     def lsdic_to_pandas(self, ls_dic):
-        return
+        import pandas as pd
+        dfs=[]
+        for key in ls_dic[0]:
+            print(key)
+            print(len(ls_dic[0][key]))
+        for dic in ls_dic:
+            dfs.append(pd.DataFrame.from_dict(dic))
+        print(dfs)
+        self.dfs=pd.concat(dfs, ignore_index=True)
+        return dfs
 
     def run(self):
-        return
+        ls_path=['/home/ylucas/Bureau/annotated_fastas/1313.5461.gff','/home/ylucas/Bureau/annotated_fastas/1313.5465.gff','/home/ylucas/Bureau/annotated_fastas/1313.5466.gff']
+
+        ls_dic=[]
+
+        for path in ls_path:
+            ls_dic.append(self.gffs_to_dic(path))
+
+        dfs=self.lsdic_to_pandas(ls_dic)
+        self.dic=ls_dic
+
+a=gff_to_pandas()
+a.run()
+
