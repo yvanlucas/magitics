@@ -1,3 +1,6 @@
+import numpy as np
+import pandas as pd
+import os
 """
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -172,28 +175,96 @@ class gff_to_pandas(object):
         return dic
 
     def lsdic_to_pandas(self, ls_dic):
-        import pandas as pd
         dfs=[]
         for key in ls_dic[0]:
             print(key)
             print(len(ls_dic[0][key]))
         for dic in ls_dic:
             dfs.append(pd.DataFrame.from_dict(dic))
-        print(dfs)
-        self.dfs=pd.concat(dfs, ignore_index=True)
+        dfs=pd.concat(dfs, ignore_index=True)
         return dfs
+
+    def describe(self, dfs):
+        a=dfs.describe(include='all')
+        count3=0
+        for plfam in np.unique(dfs['prot_fam']):
+            a=dfs['size'][dfs['prot_fam']==plfam]
+            b,c = np.unique(a, return_counts=True)
+            print(plfam)
+            print(b)
+            print(c)
+            print(np.sum(c))
+            print('---')
+            if len(b)==1:
+                count3+=1
+        print(count3)
+        print(len(np.unique(dfs['prot_fam'])))
+        return a
 
     def run(self):
         ls_path=['/home/ylucas/Bureau/annotated_fastas/1313.5461.gff','/home/ylucas/Bureau/annotated_fastas/1313.5465.gff','/home/ylucas/Bureau/annotated_fastas/1313.5466.gff']
-
         ls_dic=[]
 
         for path in ls_path:
             ls_dic.append(self.gffs_to_dic(path))
-
         dfs=self.lsdic_to_pandas(ls_dic)
+        types = {'start': np.int64, 'end': np.int64}
+        dfs = dfs.astype(types)
+        print(dfs.dtypes)
+        dfs['size']=dfs['end']-dfs['start']
+        self.dfs = dfs
         self.dic=ls_dic
+        self.desc=self.describe(dfs)
+
+
+class annotate_genes(object):
+    def __init__(self):
+        return
+
+    def parse_faa(self, pathtofile):
+        with open(pathtofile, 'r') as f:
+            faa = f.readlines()
+        missing_cds = []
+        write=True
+        for line in faa:
+            if line[0] == '>':
+                write = False
+                if line[-21:] == 'hypothetical protein\n':
+                    write = True
+                    missing_cds.append([line.split(' ')[0][1:],
+                                        []])  # append to liste of CDS a list ['locus id',[translated sequence]]
+            if write:
+                missing_cds[-1][-1].append(line[:-1])  # store unidentified translated sequence
+        return missing_cds
+
+    def call_blastp(self, missing_cds):
+        for [locus, seq] in missing_cds:
+            seq = ''.join(seq)
+            with open('temp.txt','w') as w:
+                w.write(seq)
+            blastCmd = "~/blast+/bin/blastp -query %s -db %s -out %s" % (
+                seq, 'swissprot', 'out.txt')
+            os.system(blastCmd)
+        return
+
+
+    def run(self):
+        return
+
+    def gather_aminoacid_sequence(self):
+
+        return
+
+    def protein_sequence_alignment(self):
+        return
+
 
 a=gff_to_pandas()
-a.run()
+#a.run()
+
+with open('/home/ylucas/Bureau/PROKKA_10162020/PROKKA_10162020.faa','r') as f:
+    file=f.readlines()
+
+
+
 
