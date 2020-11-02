@@ -275,9 +275,44 @@ class genes_family(object):
         return df
 
 
-    def get_locus_plfams(self, df):
+    def dic_data(self,row):
+        dic={}
+        dic['contig']=int(row['accession'][-4:])-1
+        dic['start']=int(row['start'])
+        dic['end']=int(row['end'])
+        dic['patric_id']=row['patric_id']
+        dic['plfam_id']=row['plfam_id']
+        return dic
 
-        return
+    def get_locus_plfams(self, df):
+        """
+        get locus of gene (start end), contig number, patric_id and plfam if feature_type=='CDS'
+        """
+        ls=[]
+        for index, row in df.iterrows():
+            if row['feature_type']=='CDS':
+                ls.append(self.dic_data(row))
+        return ls
+
+    def write_plfam_fastas(self, pathtofile):
+        df=self.parse_patric_gff(pathtofile)
+        ls_dics=self.get_locus_plfams(df)
+
+        fasta=SeqIO.parse(pathtofile+'.fna')
+        ls_contigs=[]
+        for contig in fasta:
+            ls_contigs.append(contig)
+
+        for dic in ls_dics:
+            plfam=dic['plfam_id']
+            prot_seq=ls_contigs[dic['contig']][dic['start']-1:dic['end']-1].translate()
+            write_seq=''.join([aa for aa in prot_seq])
+            with open(os.path.join('pathtofamily',plfam), 'a') as f:
+                f.write('> '+str(dic['patric_id'])+ ' | '+'resistance')
+                f.write(write_seq)
+
+
+
 
 import pandas as pd
 df=pd.read_csv('/home/ylucas/Bureau/annotated_fastas/1313.5461.PATRIC.features.tab',sep='\t')

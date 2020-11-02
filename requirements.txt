@@ -6,5 +6,6 @@ pandas
 scikit-learn
 tensorflow
 biopython
-bcbio-gff
+#bcbio-gff
 sgt
+
