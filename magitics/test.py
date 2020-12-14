@@ -2,322 +2,267 @@ import numpy as np
 import pandas as pd
 import os
 from Bio import SeqIO
-"""
-import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.metrics import log_loss
-
-X_all = np.random.randn(5000, 2)
-y_all = ((X_all[:, 0]/X_all[:, 1]) > 1.5)*2 - 1
-X_train, X_test, y_train, y_test = train_test_split(X_all, y_all, test_size=0.5, random_state=42)
 
 
-clf = GradientBoostingClassifier(n_estimators=10, learning_rate=0.01, max_depth=3, random_state=0)
-clf.fit(X_train, y_train)
-y_pred = clf.predict_proba(X_test)[:, 1]
-print('Accuracy for a GBM: {}'.format(clf.score(X_test, y_test)))
-print("Test logloss: {}".format(log_loss(y_test, y_pred)))
 
-def compute_loss(y_true, scores_pred):
-    return log_loss(y_true, sigmoid(scores_pred))
-
-def sigmoid(x):
-    return 1 / (1 + np.exp(-x))
-
-cum_preds = np.array([x for x in clf.staged_decision_function(X_test)])[:, :, 0]
-
-def prune_prediction(cum_pred, ls_index):
-    preds_out=cum_preds[-1,:]
-    for i in ls_index: #i can't be 0 but who would prune first tree of boosting
-        preds_out=preds_out - (cum_preds[i-1,:]-cum_preds[i,:])
-    return preds_out
-
-
-import pandas as pd
-
-df=pd.read_csv('/home/ylucas/Bureau/expe_postdoc/data_postdoc/287.846.PATRIC.features.tab', sep='\t')
-a=  df.describe(include='all')
-
-dfbis=pd.read_csv('/home/ylucas/Bureau/expe_postdoc/data_postdoc/287.847.PATRIC.features.tab', sep='\t')
-b=  dfbis.describe(include='all')
-
-dfter=df+dfbis
-c=dfter.describe(include='all')
-"""
-
-# with open('/home/ylucas/toydata_pseudomonas_levofloxacin/traindata/Resistant287.8519.fa','r') as f:
-#     lines=f.readlines()
-# ls_lengths=[]
-#
-# len_contig=0
-# for line in lines:
-#     if(len(line))>10 & (len(line))<100:
-#         len_contig+= len(line)
-#     elif (len(line))<10:
-#         ls_lengths.append(len_contig)
-#         len_contig=0
-# print(ls_lengths)
-
-#TODO doc louvic example
-# POUR APPELER:
-# .. automodule:: deep_search.loaders.query_title_loader
-#    :members: build_left_right_matches
-"""
-   Split training dataset in left and right part. Build the corresponding matches.
-   Args:
-       data (pd.Dataframe): Dataframe holding positive examples
-       left_cols (array-like): Array of columns specific to the left part
-       right_cols (array-like): Array of columns specific to the right part
-   Returns:
-       left (pd.DataFrame): The left part (without duplicates).
-       right (pd.DataFrame): The right part (without duplicates).
-       matches (np.NDArray): Array holding le the left (0-th column) and right (1-th column) couples.
-   Examples:
-       >>> data = pd.DataFrame(
-       ...    [
-       ...        [1, 2, 3, 4],
-       ...        [2, 2, 4, 4],
-       ...        [1, 2, 5, 4],
-       ...        [4, 2, 6, 4],
-       ...    ],
-       ...    columns=[
-       ...        "left_col1",
-       ...        "left_col2",
-       ...        "right_col1",
-       ...        "right_col2",
-       ...    ]
-       ... )
-       >>> left_cols = ["left_col1", "left_col2"]
-       >>> right_cols = ["right_col1", "right_col2"]
-       >>> build_left_right_matches(data, left_cols, right_cols)
-       (
-           left_col1  left_col2
-       0          1          2
-       1          2          2
-       3          4          2,
-           right_col1  right_col2
-       0           3           4
-       1           4           4
-       2           5           4
-       3           6           4,
-           array([[0, 0],
-                  [1, 1],
-                  [0, 2],
-                  [2, 3]])
-       )
-   """
 # import pandas as pd
-# import numpy as np
-# import os
-# from collections import Counter
-# path='/home/ylucas/Bureau/Data/levofloxacin/'
-# dfs= []
-# for file in os.listdir(path):
-#     dfs.append(pd.read_csv(os.path.join(path, file), sep='\t'))
-#
-# dfs=pd.concat(dfs, ignore_index=True)
-#
+# df=pd.read_csv('/home/ylucas/Bureau/annotated_fastas/1313.5461.PATRIC.features.tab',sep='\t')
+# from Bio import SeqIO
+# it=SeqIO.parse('/home/ylucas/Bureau/annotated_fastas/1313.5461.fna','fasta')
+# ls=[]
+# for truc in it:
+#     ls.append(truc)
 
-# dfs['size']=dfs['end']-dfs['start']
+# path='/home/ylucas/magitics_data/cefepime/'
+# ls_paths=os.listdir(path)
 #
-# for plfam in dfs['plfam_id'][:50]:
-#     a=dfs['size'][dfs['plfam_id']==plfam]
-#     b,c = np.unique(a, return_counts=True)
-#     print(b)
-#     print(c)
-#     print(np.sum(c))
-#     print('---')
+# ls_dfs=[]
+# for folder in ls_paths:
+#     for file in os.listdir(os.path.join(path, folder)):
+#         ls_dfs.append(pd.read_csv(os.path.join(path,folder,file), sep= '\t'))
+# df=pd.concat(ls_dfs, ignore_index=True)
 
-# from BCBio import GFF
-# from sgt import SGT
-#
-# infile='/home/ylucas/Bureau/annotated_fastas/1313.5461.gff'
-# inhandle=open(infile)
-# for rec in GFF.parse(inhandle):
-#     print(rec)
+#a=df['plfam_id'].value_counts()
+#a=df['plfam_id'].hist(bins=10)
 
-"""
-Class to parse gff files generated by prokka
-"""
-# class gff_to_pandas(object):
-#     def __init__(self):
-#         return
+# with open('/home/ylucas/magitics_data/ls_file.txt', 'r') as f:
+#     ls_file=f.readlines()
 #
-#     def gffs_to_dic(self, pathtogff):
-#         with open(pathtogff, 'r') as f:
-#             lines=f.readlines()
+# with open('/home/ylucas/magitics_data/ls_aligns.txt','r') as f:
+#     ls_aligns=f.readlines()
 #
-#         dic={'scaffold': [], 'source': [], 'type': [], 'start': [], 'end': [],
-#          'score': [], 'strand': [], 'frame': [], 'attributes': [], 'ID': [], 'eC_number':[], 'Name': [], 'gene': [],
-#          'inference': [], 'locus_tag': [],
-#          'product': [], 'prot_fam': [],
-#          'note': []}
-#         tabsplit=['scaffold','source','type','start','end','score','strand','frame','attributes']
-#         for line in lines[1:]:
-#             #print(line)
-#             if len(line.split('\t'))<3:
-#                 continue
-#
-#             line=line.split('\t')
-#             for thing, head in zip(line,tabsplit):
-#
-#                 dic[head].append(thing)
-#             attributes=dic['attributes'][-1].split(';')
-#             for thing in attributes:
-#                 splitted=thing.split('=')
-#                 dic[splitted[0]].append(splitted[1])
-#             inference=dic['inference'][-1].split(':')
-#             if len(inference)==5:
-#                 dic['prot_fam'].append(inference[-1])
-#             else:
-#                 dic['prot_fam'].append('protein')
-#         todel=['eC_number', 'Name','gene','inference','note']
-#         for thing in todel:
-#             del(dic[thing])
-#         return dic
-#
-#     def lsdic_to_pandas(self, ls_dic):
-#         dfs=[]
-#         for key in ls_dic[0]:
-#             print(key)
-#             print(len(ls_dic[0][key]))
-#         for dic in ls_dic:
-#             dfs.append(pd.DataFrame.from_dict(dic))
-#         dfs=pd.concat(dfs, ignore_index=True)
-#         return dfs
-#
-#     def describe(self, dfs):
-#         a=dfs.describe(include='all')
-#         count3=0
-#         for plfam in np.unique(dfs['prot_fam']):
-#             a=dfs['size'][dfs['prot_fam']==plfam]
-#             b,c = np.unique(a, return_counts=True)
-#             print(plfam)
-#             print(b)
-#             print(c)
-#             print(np.sum(c))
-#             print('---')
-#             if len(b)==1:
-#                 count3+=1
-#         print(count3)
-#         print(len(np.unique(dfs['prot_fam'])))
-#         return a
-#
-#     def run(self):
-#         ls_path=['/home/ylucas/Bureau/annotated_fastas/1313.5461.gff','/home/ylucas/Bureau/annotated_fastas/1313.5465.gff','/home/ylucas/Bureau/annotated_fastas/1313.5466.gff']
-#         ls_dic=[]
-#
-#         for path in ls_path:
-#             ls_dic.append(self.gffs_to_dic(path))
-#         dfs=self.lsdic_to_pandas(ls_dic)
-#         types = {'start': np.int64, 'end': np.int64}
-#         dfs = dfs.astype(types)
-#         print(dfs.dtypes)
-#         dfs['size']=dfs['end']-dfs['start']
-#         self.dfs = dfs
-#         self.dic=ls_dic
-#         self.desc=self.describe(dfs)
-
-#
-# class annotate_genes(object):
-#     def __init__(self):
-#         return
-#
-#     def parse_faa(self, pathtofile):
-#         with open(pathtofile, 'r') as f:
-#             faa = f.readlines()
-#         missing_cds = []
-#         write=True
-#         for line in faa:
-#             if line[0] == '>':
-#                 write = False
-#                 if line[-21:] == 'hypothetical protein\n':
-#                     write = True
-#                     missing_cds.append([line.split(' ')[0][1:],
-#                                         []])  # append to liste of CDS a list ['locus id',[translated sequence]]
-#             if write:
-#                 missing_cds[-1][-1].append(line[:-1])  # store unidentified translated sequence
-#         return missing_cds
-#
-#     def call_blastp(self, missing_cds):
-#         for [locus, seq] in missing_cds:
-#             seq = ''.join(seq)
-#             with open('temp.txt','w') as w:
-#                 w.write(seq)
-#             blastCmd = "~/blast+/bin/blastp -query %s -db %s -out %s" % (
-#                 seq, 'swissprot', 'out.txt')
-#             os.system(blastCmd)
-#         return
-#
-#
-#     def run(self):
-#         return
-#
-#     def gather_aminoacid_sequence(self):
-#
-#         return
-#
-#     def protein_sequence_alignment(self):
-#         return
+# ls_missing=[]
+# for i in ls_file:
+#     if i not in ls_aligns:
+#         ls_missing.append(i)
 
 
 
-with open('/home/ylucas/Bureau/PROKKA_10162020/PROKKA_10162020.faa','r') as f:
-    file=f.readlines()
-
-class genes_family(object):
+from BCBio import GFF
+class parse_gff_fasta_to_extract_CDS(object):
     def __init__(self):
         return
 
-    def parse_patric_gff(self, pathtofile):
-        df=pd.read_csv(pathtofile, sep='/t')
-        return df
+    def parse_gff(self, pathgff):
+        import gffutils
+        db = gffutils.create_db(data=pathgff, dbfn='memory',
+                                force=True)
+        return db
+
+    def parse_fasta(self, pathfasta):
+        import pyfaidx
+        fasta = pyfaidx.Fasta(pathfasta)
 
 
-    def dic_data(self,row):
-        dic={}
-        dic['contig']=int(row['accession'][-4:])-1
-        dic['start']=int(row['start'])
-        dic['end']=int(row['end'])
-        dic['patric_id']=row['patric_id']
-        dic['plfam_id']=row['plfam_id']
-        return dic
+    def run(self, path):
+        pathgff=os.path.join(path, 'gnagna.gff')
+        pathfasta=os.path.join(path, 'gnagna.fna')
 
-    def get_locus_plfams(self, df):
-        """
-        get locus of gene (start end), contig number, patric_id and plfam if feature_type=='CDS'
-        """
-        ls=[]
-        for index, row in df.iterrows():
-            if row['feature_type']=='CDS':
-                ls.append(self.dic_data(row))
-        return ls
+        db=self.parse_gff(pathgff)
+        fasta=self.parse_fasta(pathfasta)
 
-    def write_plfam_fastas(self, pathtofile):
-        df=self.parse_patric_gff(pathtofile)
-        ls_dics=self.get_locus_plfams(df)
-
-        fasta=SeqIO.parse(pathtofile+'.fna')
-        ls_contigs=[]
-        for contig in fasta:
-            ls_contigs.append(contig)
-
-        for dic in ls_dics:
-            plfam=dic['plfam_id']
-            prot_seq=ls_contigs[dic['contig']][dic['start']-1:dic['end']-1].translate()
-            write_seq=''.join([aa for aa in prot_seq])
-            with open(os.path.join('pathtofamily',plfam), 'a') as f:
-                f.write('> '+str(dic['patric_id'])+ ' | '+'resistance')
-                f.write(write_seq)
+        ls_seq = []
+        ls_id=[]
+        for cds in db.features_of_type('CDS', order_by='start'):
+            ls_seq.append(cds.sequence(fasta))
+            ls_id.append(cds.id)
 
 
 
+# df=pd.read_csv('/home/ylucas/Bureau/annotated_fastas/1313.5461.PATRIC.features.tab',sep='\t')
+# from Bio import SeqIO
+# it=SeqIO.parse('/home/ylucas/Bureau/annotated_fastas/1313.5461.fna','fasta')
+# ls=[]
+# for truc in it:
+#     ls.append(truc)
+
+#GFF_fasta=parse_gff_fasta_to_extract_CDS()
+#GFF_fasta.parse_gff('/home/ylucas/magitics_data/Prokka_annotation/PROKKA_11092020.gff')
+
+
+"""
+from collections import defaultdict
+import pandas as pd
+from Bio import SearchIO
+
+filename = '/home/ylucas/magitics_data/hmmscan_out.txt'
+
+attribs = ['accession', 'bias', 'bitscore', 'description', 'cluster_num', 'domain_exp_num',  'domain_included_num', 'domain_obs_num', 'domain_reported_num', 'env_num', 'evalue', 'id', 'overlap_num', 'region_num']
+
+hits = defaultdict(list)
+
+with open(filename) as handle:
+    for queryresult in SearchIO.parse(handle, 'hmmer3-tab'):
+      #print(queryresult.id)
+      #print(queryresult.accession)
+      #print(queryresult.description)
+      for hit in queryresult.hits:
+        for attrib in attribs:
+          hits[attrib].append(getattr(hit, attrib))
+
+df=pd.DataFrame.from_dict(hits)
 
 import pandas as pd
-df=pd.read_csv('/home/ylucas/Bureau/annotated_fastas/1313.5461.PATRIC.features.tab',sep='\t')
-from Bio import SeqIO
-it=SeqIO.parse('/home/ylucas/Bureau/annotated_fastas/1313.5461.fna','fasta')
-ls=[]
-for truc in it:
-    ls.append(truc)
+path='/home/ylucas/magitics_data/cef_hmm_pred.txt'
+
+df= pd.read_csv(path, sep='\t')
+file=open(path,'r')
+lines=file.readlines()
+print(lines[:10])
+"""
+
+"""
+path='/home/ylucas/magitics_data/cef_hmm_pred.txt'
+
+from collections import defaultdict
+import pandas as pd
+from Bio import SearchIO
+attribs = ['query_id', 'bitscore','evalue', 'id']
+
+hits = defaultdict(list)
+
+with open(path) as handle:
+    for queryresult in SearchIO.parse(handle, 'hmmer3-tab'):
+      #print(queryresult.id)
+      #print(queryresult.accession)
+      #print(queryresult.description)
+      for hit in queryresult.hits:
+        for attrib in attribs:
+          hits[attrib].append(getattr(hit, attrib))
+
+df=pd.DataFrame.from_dict(hits)
+
+grouped=df.groupby('query_id')
+uniques=df['query_id'].unique()
+
+ls_evalue=[]
+ls_score=[]
+ls_ratio=[]
+
+for locus_id in uniques:
+    group=grouped.get_group(locus_id)
+    try:
+        ls_evalue.append(np.log10(group.iloc[0,2])-np.log10(group.iloc[1,2]))
+        ls_score.append(np.log10(group.iloc[0, 2]))
+        ls_ratio.append(group.iloc[0, 1]-group.iloc[1, 1])
+    except:
+        a=1
+
+import matplotlib.pyplot as plt
+ls_a=[]
+for thing in ls_evalue:
+    if thing>-3000:
+        ls_a.append(thing)
+
+
+c=0
+for thing in ls_a:
+    if thing<2:
+        c+=1
+plt.hist(ls_a, bins=100)
+"""
+import pandas as pd
+import numpy as np
+import argparse
+from collections import defaultdict
+from Bio import SearchIO, SeqIO
+
+class hmmscan_to_pandas(object):
+    def __init__(self):
+        return
+
+    def parse_file(self, path):
+        attribs = ['query_id', 'bitscore', 'evalue', 'id']
+
+        hits = defaultdict(list)
+        with open(path) as handle:
+            for queryresult in SearchIO.parse(handle, 'hmmer3-tab'):
+              #print(queryresult.id)
+              #print(queryresult.accession)
+              #print(queryresult.description)
+              for hit in queryresult.hits:
+                for attrib in attribs:
+                  hits[attrib].append(getattr(hit, attrib))
+        df=pd.DataFrame.from_dict(hits)
+        return df
+
+    def get_score_values(self, df):
+        grouped = df.groupby('query_id')
+        uniques = df['query_id'].unique()
+
+        ls_evalue = []
+        ls_score = []
+        ls_ratio = []
+
+        for locus_id in uniques:
+            group = grouped.get_group(locus_id)
+            try:
+                ls_evalue.append(np.log10(group.iloc[0, 2]) - np.log10(group.iloc[1, 2]))
+                ls_score.append(group.iloc[0, 1])
+                ls_ratio.append(group.iloc[0, 1] - group.iloc[1, 1])
+            except:
+                a = 1
+
+
+    def get_annotation(self, df):
+        grouped = df.groupby('query_id')
+        uniques = df['query_id'].unique()
+
+        dic_annotation={}
+        for locus_id in uniques:
+            group = grouped.get_group(locus_id)
+            dic_annotation[group.iloc[0,0]]=group.iloc[0,3] #todo verifier coordinates
+        return dic_annotation
+
+pathhmmscan='/home/ylucas/287999_hmmscan.txt'
+hmmscan_parse=hmmscan_to_pandas()
+parsed_hmmscan=hmmscan_parse.parse_file(pathhmmscan)
+dic_annotation=hmmscan_parse.get_annotation(parsed_hmmscan)
+ls_scan=[]
+for key in dic_annotation:
+    ls_scan.append(dic_annotation[key])
+
+
+pathpatric='/home/ylucas/287.999.PATRIC.features.tab'
+df=pd.read_csv(pathpatric, sep='\t')
+
+# Get names of indexes for which column Age has value 30
+indexNames = df[ df['feature_type'] != 'CDS' ].index
+# Delete these row indexes from dataFrame
+df.drop(indexNames , inplace=True)
+ls_pat=df['plfam_id'].to_list()
+
+import difflib
+sm=difflib.SequenceMatcher(None, ls_pat, ls_scan)
+sm.ratio()
+
+ls_wrong=[]
+
+for thing in ls_pat:
+    if thing in ls_scan:
+        ls_scan.remove(thing)
+
+grouped=parsed_hmmscan.groupby('query_id')
+dic_wrong={}
+dic_wrong_noratio={}
+for wrongplf in ls_scan:
+    susceptible=parsed_hmmscan.loc[parsed_hmmscan['id']==wrongplf]
+    for index, row in susceptible.iterrows():
+        CDS=row['query_id']
+        group=grouped.get_group(CDS)
+        if group.iloc[0,3]==wrongplf:
+            dic_wrong_noratio[wrongplf] = [-np.log10(group.iloc[0, 2])]
+
+            try:
+                dic_wrong[wrongplf]=[-np.log10(group.iloc[0,2]), -np.log10(group.iloc[0,2])+np.log10(group.iloc[1,2])]
+            except:
+                a=0
+
+dfwrong=pd.DataFrame.from_dict(dic_wrong, orient='index')
+dfwrongreplaced=dfwrong.replace([np.inf, -np.inf], np.nan)
+dfwrongreplaced.dropna(inplace=True)
+
+fasta=SeqIO.parse('/home/ylucas/287.999.fna','fasta')
+ls_contigs=[]
+for record in fasta:
+    ls_contigs.append(record)
