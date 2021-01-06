@@ -417,7 +417,7 @@ class Test_streaming(object):
         # df = pd.read_excel('/home/ylucas/Bureau/SP_strains_metadata.xlsx')
         df = pd.read_excel('/scratch/MAGITICS_data/Streptococcus_pneumoniae/SP_strains_metadata.xlsx')
         row=np.where(df.values==strain)[0]
-        return df['chloramphenicol'].values[row]
+        return df['Penicillin'].values[row]
 
 
     def get_kmer_counts(self, kmercountfile):
@@ -517,8 +517,10 @@ class Test_streaming(object):
         """
 
         score = {}
-        print(y_test)
-        print(y_preds)
+        #print(y_test)
+        #print(y_preds)
+        for ytest, ypred in zip(y_test, y_preds):
+            print(str(ytest[0])+'\t'+str(ypred))
         #score["ROC_AUC"] = metrics.roc_auc_score(y_test, y_preds[:, -1])
         #if tres==None:
         #    with open(os.path.join(cfg.pathtoxp, cfg.xp_name, cfg.id, f"{cfg.model}_tres_value.txt"), "r") as f:

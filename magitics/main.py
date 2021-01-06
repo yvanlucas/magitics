@@ -44,7 +44,7 @@ if __name__ == "__main__":
         create_geneIDsDF()
         train_test_model_batch()
     elif cfg.dtype=='sparse':
-        #create_sparseDB()
+        create_sparseDB()
         train_test_model_stream()
 
 

@@ -1,606 +1,2231 @@
-10
-[2, 4, 8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 8, 4, 4, 2, 4, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 16, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 8, 4, 4, 4, 2, 4, 4, 4, 4, 2, 2, 4, 4, 4, 4, 4, 4, 16, 16, 4, 8, 4, 4, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 4, 2, 2, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 2, 4, 2, 8, 4, 4, 4, 4, 2, 4, 2, 2, 1, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 4, 4, 8, 8, 4, 2, 2, 4, 4, 4, 4, 4, 4, 2, 4]
-[2, 4, 8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 8, 4, 4, 2, 4, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 16, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 8, 4, 4, 4, 2, 4, 4, 4, 4, 2, 2, 4, 4, 4, 4, 4, 4, 16, 16, 4, 8, 4, 4, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 4, 2, 2, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 2, 4, 2, 8, 4, 4, 4, 4, 2, 4, 2, 2, 1, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 4, 4, 8, 8, 4, 2, 2, 4, 4, 4, 4, 4, 4, 2, 4]
-[2, 4, 8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 4, 4, 4, 4, 4, 4, 4, 8, 8, 4, 4, 2, 4, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 16, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 8, 4, 4, 4, 2, 4, 4, 4, 4, 2, 2, 4, 4, 4, 4, 4, 4, 16, 16, 4, 8, 4, 4, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 4, 2, 2, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 2, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 2, 4, 2, 8, 4, 4, 4, 4, 2, 4, 2, 2, 1, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 4, 4, 8, 8, 4, 2, 2, 4, 4, 4, 4, 4, 4, 2, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP127.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1995749
+label
+2
+[2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP60.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2008943
+label
+0
+[2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP163.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2059441
+label
+0
+[2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP246.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2009237
+label
+0
+[2, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP100.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2022711
+label
+2
+[2, 0, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP34.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1981409
+label
+1
+[2, 0, 0, 0, 2, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP95.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996702
+label
+2
+[2, 0, 0, 0, 2, 1, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP156.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996681
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP79.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1979353
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP259.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1983048
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP8.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2038469
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP212.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2000303
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP40.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2022369
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP24.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2047463
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP117.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1999022
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP190.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2052241
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP69.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997153
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP272.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1985953
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP173.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997011
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP131.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2006024
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP59.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2000751
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP210.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2052560
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP49.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2053026
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP107.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2031989
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP206.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2052072
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP231.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2119411
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP122.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1995592
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP7.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2060199
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP116.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2095110
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP152.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2018715
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP183.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1989645
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP94.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2003533
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP78.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027122
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP182.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997549
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP181.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1993912
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP287.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2060061
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP296.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2095123
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP84.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2002535
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP224.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2007540
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP68.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997536
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP180.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1995817
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP164.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2034720
+label
+16
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP235.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2095075
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP13.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1998657
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP58.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2083137
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP255.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997370
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP275.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2130172
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP200.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2110207
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP135.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996501
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP277.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2081143
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP295.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2147386
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP213.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2018571
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP155.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2008630
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP4.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997059
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP175.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1982637
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP290.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2057917
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP101.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997397
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP195.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1980865
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP32.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2055523
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP256.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1982335
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP294.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2039069
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP22.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2049769
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP201.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2105101
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP166.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2030657
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP83.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2010958
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP170.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027903
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP223.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2007433
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP197.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2088250
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP264.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2019594
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP158.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2071562
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP257.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2050252
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP189.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1935315
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP47.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2015667
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP108.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027906
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP188.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2099654
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP278.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2005565
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP139.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1992675
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP233.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2040369
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP280.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997326
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP31.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2004324
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP92.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2111180
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP126.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1995531
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP247.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2054722
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP76.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2050181
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP82.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2034654
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP66.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1998085
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP160.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2028002
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP222.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1939859
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP243.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2034932
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP252.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1995734
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP56.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2046774
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP237.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2097104
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP282.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2105087
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP46.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2040704
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP269.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1980845
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP209.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2061210
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP102.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997332
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP270.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2073575
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP227.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2010280
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP30.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1940139
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP132.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2118825
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP121.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2017122
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP162.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1993812
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP20.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2055618
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP266.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2093532
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP81.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1998734
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP284.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1968820
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP65.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1995026
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP192.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2032771
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP10.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2007275
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP217.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2038602
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP55.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997339
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP254.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2047280
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP169.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2038050
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP45.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2033621
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP29.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2007199
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP119.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1957879
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP207.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996916
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP90.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1979455
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP74.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1926432
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP273.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2081398
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP136.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1995236
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP140.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2052328
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP204.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2037328
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP70.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1957935
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP54.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997963
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP144.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2033817
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP99.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2037244
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP44.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997943
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP283.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1992921
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP249.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2009946
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP18.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2186396
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP303.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2042570
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP268.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2037067
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP218.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2232643
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP73.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1988906
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP301.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1988819
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP298.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1985087
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP248.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2222003
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP63.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2030114
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP265.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1998218
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP141.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996148
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP274.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2061816
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP1.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2007220
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP125.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996145
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP285.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2071484
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP199.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1948198
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP145.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2041362
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP53.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2038491
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP113.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1985894
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP98.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1991484
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP232.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2045290
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP241.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1993864
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP149.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2105694
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP185.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2082889
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP262.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1998682
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP27.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2053995
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP292.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1988084
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP191.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2038865
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP123.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996245
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP112.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2010151
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP291.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2034117
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP172.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2034870
+label
+16
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP120.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2078893
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP6.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2040108
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP134.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2033492
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP279.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2037844
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP133.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1986523
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP42.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1994020
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP26.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1940264
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP87.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1998673
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP229.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2008041
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP111.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996381
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP157.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997630
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP104.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2221968
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP16.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2133567
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP211.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2015446
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP143.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2052575
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP106.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2019157
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP179.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1998764
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP110.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2055940
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP51.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027518
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP161.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2038422
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP35.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1981272
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP96.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2015383
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP286.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1996304
+label
+4
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP234.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2035331
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP25.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1991085
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP196.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2095257
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP86.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2106124
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP138.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2147717
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP261.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2019228
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP153.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2050076
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP174.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027100
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP15.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2149609
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP302.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 1997603
+label
+1
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP168.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2027724
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP220.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2029826
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP118.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2026238
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0, 0, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP300.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2050977
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0, 0, 0, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP198.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2046491
+label
+2
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0, 0, 0, 2, 2]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP208.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2123350
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0, 0, 0, 2, 2, 0]
+/scratch/MAGITICS_data/Streptococcus_pneumoniae/datajie/SP288.fa
+dsk2ascii                               
+    stats                                   
+        kmer_size                                : 20
+        nb_kmers                                 : 2017871
+label
+0
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0, 0, 0, 2, 2, 0, 0]
+*** Creating matrix ***
+***Sparse matrix created***
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0, 0, 0, 2, 2, 0, 0]
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0, 0, 0, 2, 2, 0, 0]
+[2, 0, 0, 0, 2, 1, 2, 4, 1, 1, 1, 1, 2, 0, 2, 2, 2, 0, 1, 1, 0, 1, 2, 1, 1, 2, 2, 0, 1, 1, 4, 0, 0, 4, 0, 0, 2, 0, 0, 0, 4, 16, 0, 1, 0, 1, 0, 1, 4, 0, 1, 0, 1, 4, 0, 0, 2, 4, 0, 1, 2, 0, 2, 2, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 1, 2, 1, 2, 4, 0, 0, 0, 0, 1, 2, 0, 1, 0, 1, 0, 2, 1, 0, 0, 1, 2, 0, 1, 0, 2, 2, 2, 1, 0, 1, 2, 1, 4, 1, 0, 0, 0, 1, 0, 0, 4, 2, 0, 0, 4, 4, 2, 2, 2, 0, 0, 1, 1, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 0, 2, 4, 1, 0, 0, 2, 2, 2, 1, 16, 0, 0, 2, 0, 2, 0, 0, 2, 0, 2, 4, 0, 0, 0, 2, 2, 4, 2, 2, 2, 1, 1, 4, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0, 0, 0, 2, 2, 0, 0]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1996321
-[4]
+[0.008]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2092852
-[2]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1995884
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1997221
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1984517
-[2]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2061322
-[16]
+[0.031]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1997550
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2077604
-[4]
+[0.125]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1997366
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1986148
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2000357
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2027442
-[16]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2186637
-[16]
+[0.5]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1997399
-[2]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2056955
-[16]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1996905
-[2]
+[4.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2061399
-[2]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1991861
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2120346
-[4]
+[0.5]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2042237
-[16]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2047381
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1992838
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2064254
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1982789
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2027725
-[2]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1995546
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1954209
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1979967
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1980315
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2027261
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2037393
-[4]
+[0.004]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2049714
-[4]
+[0.031]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2027069
-[2]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2034005
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2049745
-[2]
+[0.031]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2000189
-[2]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2036863
-[2]
+[0.008]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1988838
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1995851
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1997436
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2033416
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2037035
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2095558
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2001295
-[4]
+[0.5]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2121022
-[4]
+[0.25]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1994168
-[2]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2090896
-[4]
+[0.25]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2092823
-[4]
+[0.5]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2027622
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2007182
-[4]
+[0.062]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2003779
-[4]
+[0.125]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2048449
-[2]
+[0.031]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2118071
-[1]
+[0.5]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1960053
-[4]
+[0.031]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1980891
-[4]
+[0.5]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2002335
-[4]
+[0.125]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1997354
-[2]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1985338
-[2]
+[0.004]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2051405
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1997747
-[4]
+[4.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2007322
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1996964
-[2]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2062289
-[4]
+[0.125]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1994104
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2016968
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2071339
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2022787
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2046218
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2105658
-[16]
+[0.5]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1984733
-[4]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2091728
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2070240
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2029156
-[4]
+[0.062]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1979549
-[4]
+[0.062]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2032649
-[2]
+[0.062]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2008252
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2054381
-[2]
+[0.125]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2016275
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2067255
-[2]
+[0.062]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2019918
-[2]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1994109
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2018179
-[4]
+[0.062]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1997381
-[4]
+[4.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2008218
-[2]
+[0.016]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2089264
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1985244
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1996239
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1984125
-[4]
+[0.125]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2018481
-[4]
+[0.125]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2040197
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 1997717
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2033772
-[4]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2232722
-[16]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2076692
-[16]
+[0.031]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2038418
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2040882
-[4]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2006715
-[2]
+[1.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2051760
-[2]
+[2.]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2049762
-[4]
+[0.25]
 dsk2ascii                               
     stats                                   
         kmer_size                                : 20
         nb_kmers                                 : 2000368
-[8]
-[array([4]), array([2]), array([4]), array([4]), array([2]), array([16]), array([4]), array([4]), array([4]), array([4]), array([4]), array([16]), array([16]), array([2]), array([16]), array([2]), array([2]), array([4]), array([4]), array([16]), array([4]), array([4]), array([4]), array([4]), array([2]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([2]), array([4]), array([2]), array([2]), array([2]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([2]), array([4]), array([4]), array([4]), array([4]), array([4]), array([2]), array([1]), array([4]), array([4]), array([4]), array([2]), array([2]), array([4]), array([4]), array([4]), array([2]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([16]), array([4]), array([4]), array([4]), array([4]), array([4]), array([2]), array([4]), array([2]), array([4]), array([2]), array([2]), array([4]), array([4]), array([4]), array([2]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([4]), array([16]), array([16]), array([4]), array([4]), array([2]), array([2]), array([4]), array([8])]
-[[3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [5.23403005]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [5.23403005]
- [3.96112205]
- [3.96112205]
- [5.23403005]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [5.23403005]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [5.23403005]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [8.18174433]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [5.23403005]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [5.23403005]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [5.23403005]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [3.96112205]
- [5.23403005]]
-[2542845]
+[0.016]
+[array([0.008]), array([1.]), array([2.]), array([1.]), array([0.016]), array([0.031]), array([2.]), array([0.125]), array([1.]), array([2.]), array([1.]), array([0.016]), array([0.5]), array([2.]), array([0.016]), array([4.]), array([2.]), array([0.016]), array([0.5]), array([0.016]), array([1.]), array([0.016]), array([1.]), array([2.]), array([2.]), array([2.]), array([0.016]), array([2.]), array([2.]), array([0.016]), array([0.004]), array([0.031]), array([1.]), array([1.]), array([0.031]), array([1.]), array([0.008]), array([0.016]), array([2.]), array([1.]), array([1.]), array([2.]), array([2.]), array([0.5]), array([0.25]), array([0.016]), array([0.25]), array([0.5]), array([2.]), array([0.062]), array([0.125]), array([0.031]), array([0.5]), array([0.031]), array([0.5]), array([0.125]), array([2.]), array([0.004]), array([1.]), array([4.]), array([0.016]), array([2.]), array([0.125]), array([0.016]), array([2.]), array([0.016]), array([0.016]), array([0.016]), array([0.5]), array([0.016]), array([1.]), array([1.]), array([0.062]), array([0.062]), array([0.062]), array([1.]), array([0.125]), array([1.]), array([0.062]), array([0.016]), array([2.]), array([0.062]), array([4.]), array([0.016]), array([1.]), array([2.]), array([2.]), array([0.125]), array([0.125]), array([2.]), array([2.]), array([1.]), array([1.]), array([0.031]), array([2.]), array([2.]), array([1.]), array([2.]), array([0.25]), array([0.016])]
+[[0.44172666]
+ [0.90960286]
+ [1.6169626 ]
+ [1.6959151 ]
+ [0.44172666]
+ [0.47125068]
+ [1.5392743 ]
+ [0.5565532 ]
+ [1.52150682]
+ [1.81650278]
+ [1.62335469]
+ [0.44172666]
+ [0.63043267]
+ [1.93120622]
+ [0.44172666]
+ [1.84087834]
+ [0.44172666]
+ [0.44172666]
+ [0.5565532 ]
+ [0.44172666]
+ [2.15696084]
+ [0.44172666]
+ [1.42565831]
+ [1.94968169]
+ [1.6959151 ]
+ [2.32729578]
+ [0.44172666]
+ [2.30759865]
+ [1.6959151 ]
+ [0.44172666]
+ [0.44172666]
+ [0.44172666]
+ [1.2413594 ]
+ [2.25712398]
+ [0.44172666]
+ [1.62335469]
+ [0.44172666]
+ [0.44172666]
+ [1.85471633]
+ [1.52150682]
+ [1.49179558]
+ [1.67975922]
+ [0.88928298]
+ [0.7835875 ]
+ [1.2413594 ]
+ [0.44172666]
+ [1.2413594 ]
+ [0.78712392]
+ [1.48231606]
+ [0.44172666]
+ [0.44172666]
+ [0.44172666]
+ [2.40617574]
+ [1.29203226]
+ [1.67885662]
+ [0.44172666]
+ [1.83210982]
+ [0.44172666]
+ [1.49179558]
+ [1.75315732]
+ [0.44172666]
+ [2.14879741]
+ [0.68427763]
+ [0.44172666]
+ [1.45536955]
+ [0.44172666]
+ [0.44172666]
+ [0.44172666]
+ [1.05987207]
+ [0.44172666]
+ [1.38204563]
+ [1.4199203 ]
+ [0.44172666]
+ [0.44172666]
+ [1.29203226]
+ [1.05987207]
+ [1.49148666]
+ [1.52229123]
+ [0.56774202]
+ [0.44172666]
+ [0.44172666]
+ [0.44172666]
+ [1.66620386]
+ [0.44172666]
+ [1.42565831]
+ [1.52150682]
+ [1.5536896 ]
+ [0.68427763]
+ [0.44172666]
+ [1.49179558]
+ [1.52150682]
+ [1.72410763]
+ [0.98212846]
+ [0.44172666]
+ [1.49179558]
+ [1.34537134]
+ [1.05987207]
+ [1.49179558]
+ [0.68427763]
+ [0.68427763]]
+[1750836, 2363207]
