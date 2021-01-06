@@ -304,8 +304,8 @@ class Kmercount_to_matrix(object):
         df = pd.read_excel('/scratch/MAGITICS_data/Streptococcus_pneumoniae/SP_strains_metadata.xlsx')
         row=np.where(df.values==strain)[0]
         print('label')
-        print(int(df['chloramphenicol'].values[row]))
-        return int(df['chloramphenicol'].values[row])
+        print(int(df['Penicillin'].values[row]))
+        return int(df['Penicillin'].values[row])
 
     def run(self):
         """

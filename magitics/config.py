@@ -52,8 +52,8 @@ rf_grid = {'max_features': ['sqrt', 'log2'],
 
 SCM_grid = {'p': [1, 10], 'max_rules': [1, 3 ,10], 'model_type':['conjunction','disjunction']}
 
-gradient_grid = {'max_depth': [2, 4],
-                 'n_estimators': [10, 6,4]}
+gradient_grid = {'max_depth': [1, 2, 4],
+                 'n_estimators': [10, 6,4, 2] }
 
 ada_grid =  {'n_estimators': [ 5, 10, 20]}
 
@@ -69,4 +69,4 @@ def get_lenkmers():
 
 len_kmers= 20 #int(get_lenkmers())
 
-id='gradkmers20_'+str(int(get_lenkmers()))
+id='MICkmers20penicillin'#+str(int(get_lenkmers()))
