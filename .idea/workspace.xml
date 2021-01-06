@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efdf6f3e-cc0d-40ad-a640-7563160e00d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HMM_scores/HMMscores.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HMM_scores/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HMM_scores/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HMM_scores/learning.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HMM_scores/trainHMMs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMM_scores/HMMscores.py" beforeDir="false" afterPath="$PROJECT_DIR$/HMM_scores/HMMscores.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
