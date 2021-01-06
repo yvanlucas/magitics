@@ -2,7 +2,7 @@
 
 #SBATCH --job-name=MAGITICS_kmers
 #SBATCH --nodes=1
-#SBATCH --mem=250gb
+#SBATCH --mem=60gb
 #SBATCH --ntasks-per-node=5
 #SBATCH --array=10
 
