@@ -116,6 +116,7 @@ run the script using:
 #SBATCH --job-name=musclehmmer
 #SBATCH --nodes=1
 #SBATCH --mem=8gb
+
 #SBATCH --ntasks-per-node=1
 #SBATCH --array=1-10000%100  #The range of the array will need to be updated 
                              # in order to cover the totality of the plfams collection
@@ -131,9 +132,12 @@ hmmbuild hmm_profiles/$FILENAME aligns/$FILENAME
 """
 
 #TODO 3: HMM FLATFILE PAR COUPLE DE PROFILE DE PLFAM
-
+#1. Get list of existing hmm_profiles
 def write_plfam_lists(pathresistant='../toy_dataset/plfams/resistant', pathsusceptible='../toy_dataset/plfams/susceptible', pathtowrite='../toy_dataset/plfams'):
-    ls_resistant=os.listdir(pathresistant)
+    ls_resistant_file=os.listdir(pathresistant)
+    ls_resistant=[]
+    for thing in ls_resistant_file:
+        ls_resistant.append(thing.split('_')[-1])
     ls_susceptible=os.listdir(pathsusceptible)
 
     susceptible_only=open(os.path.join(pathtowrite, 'susceptible_only.txt'),'w')
@@ -153,6 +157,30 @@ def write_plfam_lists(pathresistant='../toy_dataset/plfams/resistant', pathsusce
     susceptible_only.close()
     resistant_only.close()
     both_susc_and_res.close()
+
+#1.5 move and rename hmm_profiles to the same folder: susceptiblePLFXXX and resistantPLFXXX
+"""
+run the script using:
+* sbatch run.sh
+------------------
+#!/bin/bash
+#SBATCH --job-name=rename_profile
+#SBATCH --nodes=1
+#SBATCH --mem=8gb
+#SBATCH --ntasks-per-node=1
+#SBATCH --array=1-10000%100  #The range of the array will need to be updated 
+                             # in order to cover the totality of the plfams collection
+
+
+FILENAME=$(head -n $(($SLURM_ARRAY_TASK_ID)) ls_resistant.txt |tail -1)
+
+
+mv resistant/$FILENAME all_profiles/resistant_$FILENAME
+------------------
+"""
+
+#2 concatenate hmm_profiles of the same plfam
+def concatenate_profiles(path)
 
 """
 Execute the following bash commands:
