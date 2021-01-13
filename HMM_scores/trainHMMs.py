@@ -134,12 +134,8 @@ hmmbuild hmm_profiles/$FILENAME aligns/$FILENAME
 #TODO 3: HMM FLATFILE PAR COUPLE DE PROFILE DE PLFAM
 #1. Get list of existing hmm_profiles
 def write_plfam_lists(pathresistant='../toy_dataset/plfams/resistant', pathsusceptible='../toy_dataset/plfams/susceptible', pathtowrite='../toy_dataset/plfams'):
-    ls_resistant_file=os.listdir(pathresistant)
-    ls_resistant=[]
-    for thing in ls_resistant_file:
-        ls_resistant.append(thing.split('_')[-1])
+    ls_resistant=os.listdir(pathresistant)
     ls_susceptible=os.listdir(pathsusceptible)
-
     susceptible_only=open(os.path.join(pathtowrite, 'susceptible_only.txt'),'w')
     resistant_only=open(os.path.join(pathtowrite, 'resistant_only.txt'),'w')
     both_susc_and_res=open(os.path.join(pathtowrite, 'both_susc_and_res.txt'),'w')
@@ -148,12 +144,9 @@ def write_plfam_lists(pathresistant='../toy_dataset/plfams/resistant', pathsusce
             both_susc_and_res.write(thing+'\n')
         else:
             susceptible_only.write(thing+'\n')
-
     for thing in ls_resistant:
         if thing not in ls_susceptible:
             resistant_only.write(thing+'\n')
-
-
     susceptible_only.close()
     resistant_only.close()
     both_susc_and_res.close()
@@ -180,7 +173,8 @@ mv resistant/$FILENAME all_profiles/resistant_$FILENAME
 """
 
 #2 concatenate hmm_profiles of the same plfam
-def concatenate_profiles(path)
+def concatenate_profiles(path):
+    return
 
 """
 Execute the following bash commands:
