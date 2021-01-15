@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="efdf6f3e-cc0d-40ad-a640-7563160e00d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HMM_scores/HMMscores.py" beforeDir="false" afterPath="$PROJECT_DIR$/HMM_scores/HMMscores.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HMM_scores/trainHMMs.py" beforeDir="false" afterPath="$PROJECT_DIR$/HMM_scores/trainHMMs.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +42,9 @@
       <module name="MAGITICS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HMM_scores" />
       <option name="IS_MODULE_SDK" value="true" />
