@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="efdf6f3e-cc0d-40ad-a640-7563160e00d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMM_scores/HMMscores.py" beforeDir="false" afterPath="$PROJECT_DIR$/HMM_scores/HMMscores.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,56 +176,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="2456" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1602493513948">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2456" y="310" width="424" height="484" key="FileChooserDialogImpl/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1602493513948" />
-    <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1603725296260">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1603725296260" />
-    <state width="1807" height="344" key="GridCell.Tab.0.center" timestamp="1603725296260">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.center/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1603725296260" />
-    <state width="1807" height="344" key="GridCell.Tab.0.left" timestamp="1603725296260">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.left/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1603725296260" />
-    <state width="1807" height="344" key="GridCell.Tab.0.right" timestamp="1603725296260">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.right/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1603725296260" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1603725296260">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1603725296260" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1603725296260">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1603725296260" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1603725296260">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1603725296260" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1603725296260">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1603725296260" />
-    <state x="422" y="212" key="SettingsEditor" timestamp="1603269292950">
-      <screen x="0" y="30" width="1680" height="1050" />
-    </state>
-    <state x="422" y="212" key="SettingsEditor/1680.0.1920.1080/0.30.1680.1050@0.30.1680.1050" timestamp="1603269292950" />
-    <state x="2162" y="187" key="SettingsEditor/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1603108265627" />
-    <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1603984093288">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state width="926" height="527" key="XDebugger.FullValuePopup/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1603984093288" />
-    <state x="2336" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1602074648174">
-      <screen x="1680" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2336" y="257" width="672" height="678" key="search.everywhere.popup/1680.0.1920.1080/0.30.1680.1050@1680.0.1920.1080" timestamp="1602074648174" />
   </component>
 </project>

@@ -6,6 +6,11 @@
 # 4) put bitscore into a dic for each strain: strain: {plfam1:score1, ...}
 # 5) Create dataframe
 
+
+# old data path '../toy_dataset/susceptible'
+# new data path '/scratch/MAGITICS_data/Pseudomonas_aeruginosa/levofloxacin/data/test/susceptible'
+
+datapath= '/scratch/MAGITICS_data/Pseudomonas_aeruginosa/levofloxacin/data/test/susceptible'
 import pandas as pd
 import os, sys
 from Bio import SeqIO
@@ -83,7 +88,9 @@ class parse_PATRIC_and_fastas(object):
         label=pathtofolder.split('/')[-1]
         return label
 
-    def run(self, pathtofolder='../toy_dataset/susceptible'):
+# old path '../toy_dataset/susceptible'
+#newpath '/scratch/MAGITICS_data/Pseudomonas_aeruginosa/levofloxacin/data/test/susceptible'
+    def run(self, pathtofolder='../toy_dataset/susceptible'): #TODO: change path
         self.count=0
         strainlist=self.unique_listdir_PATRIC(os.listdir(pathtofolder))
         for strainID in strainlist:
@@ -97,27 +104,125 @@ class parse_PATRIC_and_fastas(object):
 gene_fam=parse_PATRIC_and_fastas()
 gene_fam.run()
 
+#######################################################################################
 # 2) HMMscan each locus against the corresponding HMM flatfile
+#pour compréhension: hmmscan --tblout PATRIC_scan_out.txt --cpu 10 hmm_database_flatfile 287999_new/PROKKA_12082020.ffn
+
 import argparse
-def get_lenkmers():
+def get_strainname():
     parser=argparse.ArgumentParser()
-    parser.add_argument('--strainname', type=int, default=31)
+    parser.add_argument('--strainname', type=str, default='31')
     arg=parser.parse_args()
     return arg.strainname
 
 
-def hmm_scan_each_strain():
-    strainname=get_lenkmers()
+def hmm_scan_each_strain(strainname):
 
-    pathtostrain=os.path.join('../toy_dataset/susceptible', strainname)
+    pathtostrain=os.path.join('../toy_dataset/susceptible', strainname) #TODO: change path
     ls_plfam=os.listdir(pathtostrain)
-    pathtoflatfiles=os.path.join('../toy_dataset/susceptible')
+    pathtoflatfiles=os.path.join('../toy_dataset/susceptible') #TODO: change path
 
     for plfam in ls_plfam:
-        pathtoplfam=os.path.join(pathtostrain, plfam)
-        cmd="hmmscan --tblout %s.txt --cpu 1 %s %s" %( pathtoplfam, os.path.join(pathtoflatfiles, plfam), pathtoplfam+'.ffn')
+        pathtoscan=os.path.join(pathtostrain,'hmmscan', plfam)
+        cmd="hmmscan --tblout %s.txt --cpu 1 %s %s" %( pathtoscan, os.path.join(pathtoflatfiles, plfam), pathtoplfam+'.ffn')
+        #TODO ^ change path of nuc sequence to scan
+        os.system(cmd)
+
+#FOR EACH STRAINNAME
+strainname=get_strainname()
+
+hmm_scan_each_strain(strainname)
 
 
+# 3) Get Scores and label from HMMscan output
+from Bio import SearchIO
+from collections import defaultdict
+import pickle
+class hmmscan_to_pandas(object):
+    def __init__(self):
+        return
+
+    def parse_file(self, path):
+        attribs = ['query_id', 'bitscore', 'evalue', 'id']
+
+        hits = defaultdict(list)
+        with open(path) as handle:
+            for queryresult in SearchIO.parse(handle, 'hmmer3-tab'):
+              #print(queryresult.id)
+              #print(queryresult.accession)
+              #print(queryresult.description)
+              for hit in queryresult.hits:
+                for attrib in attribs:
+                  hits[attrib].append(getattr(hit, attrib))
+        df=pd.DataFrame.from_dict(hits)
+        return df
+
+    def get_score_values(self, df):
+        grouped = df.groupby('query_id')
+        uniques = df['query_id'].unique()
+
+        dic={}
+
+        for locus_id in uniques:
+            group = grouped.get_group(locus_id)
+            ls_id = []
+            ls_score = []
+            try:
+                ls_score.append(group.iloc[0, 1])
+                ls_score.append(group.iloc[1,1])
+                ls_id.append(group.iloc[0,3])
+                ls_id.append(group.iloc[1,3])
+                score, plf=self.calculate_score(ls_score, ls_id)
+                dic[plf]=score
+            except:
+                a = 1
+        return dic
+
+    def get_label(self, strainID):
+        label='susceptible' #TODO: change by hand or automate it
+    def calculate_score(self, ls_score, ls_id):
+        if ls_id[0][:4]=='susc':
+            score=ls_score[0]-ls_score[1]
+            plf=ls_id[1][10:]
+        elif ls_id[0][:4]=='resi':
+            score=np.float64(ls_score[1])-np.float64(ls_score[0])
+            plf=ls_id[0][10:]
+        return score, plf
+
+
+    def run(self, strainID):
+        df_annotations=self.parse_file(os.path.join('../toy_dataset/susceptible',strainID,'hmmscan')) #TODO: change path
+        dic=self.get_score_values(df_annotations)
+        dic['label']=self.get_label(strainID)
+        with open(os.path.join('../toy_dataset/susceptible', strainID, 'dic_scores.pkl'), "w") as f: #TODO: change path
+            pickle.dump(dic, f)
+
+
+#FOR EACH STRAINNAME
+hmmscanparse=hmmscan_to_pandas()
+
+hmmscanparse.run(strainname)
+#4 Load all dics and append them in a pandas dataframe
+
+
+class create_df_from_hmmscandict(object):
+    def __init__(self):
+        return
+
+    def run(self, datadir):
+        ls_straindir=os.listdir(datadir)
+
+        ls_dicts=[]
+        for straindir in ls_straindir:
+            with open(os.path.join(datadir, straindir, 'dic_scores.pkl'), "r") as f:  # TODO: change path
+                dic=pickle.load(f)
+            ls_dicts.append(dic)
+
+        self.df=pd.dataframe(ls_dicts)
+
+
+create_df=create_df_from_hmmscandict()
+create_df.run('../toy_dataset_susceptible')
 
 
 
