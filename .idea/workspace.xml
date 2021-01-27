@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="efdf6f3e-cc0d-40ad-a640-7563160e00d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HMM_scores/HMMscores.py" beforeDir="false" afterPath="$PROJECT_DIR$/HMM_scores/HMMscores.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMM_scores/learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/HMM_scores/learning.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
       <recent name="$PROJECT_DIR$/HMM_scores" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.HMMscores">
+  <component name="RunManager" selected="Python.learning">
     <configuration name="HMMscores" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MAGITICS" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -60,19 +60,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="learning" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MAGITICS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/magitics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HMM_scores" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/magitics/data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HMM_scores/learning.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.HMMscores" />
-        <item itemvalue="Python.trainHMMs" />
-        <item itemvalue="Python.trainHMMs" />
-        <item itemvalue="Python.trainHMMs" />
-        <item itemvalue="Python.trainHMMs" />
+        <item itemvalue="Python.learning" />
+        <item itemvalue="Python.learning" />
+        <item itemvalue="Python.learning" />
+        <item itemvalue="Python.learning" />
+        <item itemvalue="Python.learning" />
       </list>
     </recent_temporary>
   </component>
